@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All - FF TRADERS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <section id="header">
+      <a href="index.html">
+        <img src="images/FF TRADERS4.png" alt="FF Traders Logo" width="80" height="75" loading="lazy">
+      </a>
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="shop all.html">Shop All</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li class="dropdown">
+            <a href="#">Our Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">IT Solutions</a></li>
+              <li><a href="#">Real Estate</a></li>
+              <li><a href="#">Import & Export</a></li>
+              <li><a href="#">E-Commerce Products</a></li>
+              <li><a href="#">Physiotherapy Equipment</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact Us</a></li>
+
+          <li class="cart-item">
+            <a href="cart.html" class="cart-link">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </a>
+          </li>
+
+          <li><a href="#" id="close"><i class="far fa-times"></i></a></li>
+        </ul>
+
+        <div class="menu-icon" id="bar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero (Shop Banner) -->
+    <section id="page-header" style="
+        background-image: url('images/shop-banner.jpg');
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        padding-top: 100px;
+        color: white;
+        ">
+      <h2>Shop All Products</h2>
+      <p>Explore our latest collections & best-selling items</p>
+    </section>
+
+    <!-- Products Section -->
+    <section id="product1" class="section-p1">
+      <h2>All Products</h2>
+      <p>Find everything you need in one place</p>
+
+      <div class="pro-container">
+
+        <!-- Product 1 -->
+        <div class="pro">
+          <img src="images/ecommerce1.jpg" alt="Product Image">
+          <div class="des">
+            <span>Electronics</span>
+            <h5>Smart LED Lights</h5>
+            <h4>$45</h4>
+          </div>
+          <button class="add-to-cart" data-id="prod-001" data-name="Smart LED Lights" data-price="45"
+            data-image="images/ecommerce1.jpg" aria-label="Add Smart LED Lights to cart">
+            Add to cart
+          </button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="pro">
+          <img src="images/ecommerce2.jpg" alt="Product Image">
+          <div class="des">
+            <span>Beauty</span>
+            <h5>Hair Removal IPL Device</h5>
+            <h4>$120</h4>
+          </div>
+          <button class="add-to-cart" data-id="prod-002" data-name="Hair Removal IPL Device" data-price="120"
+            data-image="images/ecommerce2.jpg" aria-label="Add Hair Removal IPL Device to cart">
+            Add to cart
+          </button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="pro">
+          <img src="images/ecommerce3.jpg" alt="Product Image">
+          <div class="des">
+            <span>Fitness</span>
+            <h5>Portable Massage Gun</h5>
+            <h4>$89</h4>
+          </div>
+          <button class="add-to-cart" data-id="prod-003" data-name="Portable Massage Gun" data-price="89"
+            data-image="images/ecommerce3.jpg" aria-label="Add Portable Massage Gun to cart">
+            Add to cart
+          </button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="pro">
+          <img src="images/ecommerce4.jpg" alt="Product Image">
+          <div class="des">
+            <span>Physiotherapy</span>
+            <h5>TENS Therapy Machine</h5>
+            <h4>$65</h4>
+          </div>
+          <button class="add-to-cart" data-id="prod-004" data-name="TENS Therapy Machine" data-price="65"
+            data-image="images/ecommerce4.jpg" aria-label="Add TENS Therapy Machine to cart">
+            Add to cart
+          </button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="pro">
+          <img src="images/patient-doing-exercise-using-sports-equipment-with-therapist.png" alt="Product Image">
+          <div class="des">
+            <span>Gadgets</span>
+            <h5>Smart Bluetooth Speaker</h5>
+            <h4>$55</h4>
+          </div>
+          <button class="add-to-cart" data-id="prod-005" data-name="Smart Bluetooth Speaker" data-price="55"
+            data-image="images/patient-doing-exercise-using-sports-equipment-with-therapist.png"
+            aria-label="Add Smart Bluetooth Speaker to cart">
+            Add to cart
+          </button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="pro">
+          <img src="images/sales-agent-using-laptop.png" alt="Product Image">
+          <div class="des">
+            <span>Accessories</span>
+            <h5>Electric Hot Comb</h5>
+            <h4>$30</h4>
+          </div>
+          <button class="add-to-cart" data-id="prod-006" data-name="Electric Hot Comb" data-price="30"
+            data-image="images/ecommerce6.jpg" aria-label="Add Electric Hot Comb to cart">
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- ...existing code... -->
+
+    <!-- Footer -->
+    <footer class="section-p1">
+      <div class="col">
+        <a href="index.html"><img class="logo" src="images/FF TRADERS4.png" alt="FF Traders Logo" width="100"
+            height="100" loading="lazy"></a>
+        <h4 style="color: #0A98E0;">Contact</h4>
+        <p style="color: white;"><strong>Address:</strong> 349, Olorilogbon street, Onigbogbo Lagos</p>
+        <p style="color: white;"><strong>Phone:</strong> +23456876199, +23458903120</p>
+        <div class="follow">
+          <h4 style="color: #0A98E0;">Follow Us</h4>
+          <div class="icon">
+            <i class="fab fa-facebook-f" style="color: #0A98E0;"></i>
+            <i class="fab fa-instagram" style="color: #0A98E0;"></i>
+            <i class="fab fa-twitter" style="color: #0A98E0;"></i>
+            <i class="fab fa-youtube" style="color: #0A98E0;"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="col">
+          <h4 style="color:#0A98E0;">About</h4>
+          <a href="#" style="color: white;">About Us</a>
+          <a href="#" style="color: white;">Delivery Information</a>
+          <a href="#" style="color: white;">Privacy Policy</a>
+          <a href="#" style="color: white;">Terms & Conditions</a>
+          <a href="#" style="color: white;">Contact Us</a>
+        </div>
+
+        <div class="col">
+          <h4 style="color: #0A98E0;">My Account</h4>
+          <a href="#" style="color: white;">Sign In</a>
+          <a href="cart.html" style="color: white;">View Cart</a>
+          <a href="#" style="color: white;">My Account</a>
+          <a href="#" style="color: white;">My Wishlist</a>
+          <a href="#" style="color: white;">Track Order</a>
+          <a href="#" style="color: white;">Help</a>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p style="color: white;">© 2024 FF TRADERS. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </body>
+
+</html>
