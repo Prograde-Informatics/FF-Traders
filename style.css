@@ -430,11 +430,12 @@ a {
 }
 
 #product1 .pro {
+  background-color: black;
   width: 30%;
   height: 390px;
   min-width: 250px;
   padding: 10px 12px;
-  border: 1px solid #0787c7;
+  border-left: 3px solid #0787c7;
   border-radius: 25px;
   cursor: pointer;
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
@@ -463,13 +464,13 @@ a {
 }
 
 #product1 .pro .des span {
-  color: #606063;
+  color: white;
   font-size: 12px;
 }
 
 #product1 .pro .des h5 {
   padding-top: 7px;
-  color: #1a1a1a;
+  color: white;
   font-size: 14px;
 }
 
