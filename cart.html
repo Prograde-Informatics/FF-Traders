@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - FF TRADERS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <section id="header">
+      <a href="index.html">
+        <img src="images/FF TRADERS4.png" alt="FF Traders Logo" width="80" height="75" loading="lazy">
+      </a>
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop all.html">Shop All</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li class="dropdown">
+            <a href="#">Our Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">IT Solutions</a></li>
+              <li><a href="#">Real Estate</a></li>
+              <li><a href="#">Import & Export</a></li>
+              <li><a href="#">Physiotherapy Equipment</a></li>
+              <li><a href="#">E-Commerce Products</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact Us</a></li>
+
+          <li class="cart-item">
+            <a class="active" href="cart.html" class="cart-link">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </a>
+          </li>
+
+          <li><a href="#" id="close"><i class="far fa-times"></i></a></li>
+        </ul>
+
+        <div class="menu-icon" id="bar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart Page Header -->
+    <section id="cart-header" class="section-p1">
+      <h1 style="color: #0A98E0; margin-top: 80px;">Your Shopping Cart</h1>
+      <p>Review and manage your items</p>
+    </section>
+
+    <!-- Cart Table -->
+    <section id="cart" class="section-p1">
+      <table width="100%" id="cart-table">
+        <thead>
+          <tr style="border-bottom: 2px solid #0A98E0;">
+            <td style="padding: 15px; font-weight: 600; color: #0A98E0;">Remove</td>
+            <td style="padding: 15px; font-weight: 600; color: #0A98E0;">Product</td>
+            <td style="padding: 15px; font-weight: 600; color: #0A98E0;">Price</td>
+            <td style="padding: 15px; font-weight: 600; color: #0A98E0;">Quantity</td>
+            <td style="padding: 15px; font-weight: 600; color: #0A98E0;">Total</td>
+          </tr>
+        </thead>
+
+        <tbody id="cart-items">
+          <!-- Filled automatically by script.js -->
+          <tr>
+            <td><button
+                style="background: #ff3b30; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer;">✕</button>
+            </td>
+            <td style="padding: 15px;">Sample Product</td>
+            <td style="padding: 15px; color: #0A98E0; font-weight: 600;">$99.99</td>
+            <td style="padding: 15px;"><input type="number" value="1" min="1"
+                style="width: 50px; padding: 5px; border: 1px solid #ccc; border-radius: 4px;"></td>
+            <td style="padding: 15px; color: #0A98E0; font-weight: 600;">$99.99</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Cart Totals Section -->
+    <section id="cart-totals" class="section-p1">
+      <div style="display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
+
+        <!-- Continue Shopping Button -->
+        <div style="flex: 1; min-width: 250px;">
+          <h3 style="color: #0A98E0; margin-bottom: 20px;">Continue Shopping</h3>
+          <a href="index.html" class="normal"
+            style="display: inline-block; background-color: #0A98E0; color: white; padding: 15px 30px; border-radius: 4px; text-decoration: none; font-weight: 600; transition: 0.3s;">
+            ← Back to Shop
+          </a>
+        </div>
+
+        <!-- Cart Totals -->
+        <div
+          style="flex: 1; min-width: 300px; background-color: #f5f7ff; padding: 30px; border-radius: 8px; border: 1px solid #0A98E0;">
+          <h3 style="color: #0A98E0; margin-bottom: 25px;">Cart Totals</h3>
+          <table style="width: 100%; border-collapse: collapse;">
+            <tr style="border-bottom: 1px solid #ddd;">
+              <td style="padding: 12px 0; font-weight: 500;">Subtotal</td>
+              <td style="padding: 12px 0; text-align: right; font-weight: 600; color: #0A98E0;" id="cart-subtotal">$0.00
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+              <td style="padding: 12px 0; font-weight: 500;">Shipping Fee</td>
+              <td style="padding: 12px 0; text-align: right; font-weight: 600; color: #0A98E0;">$10.00</td>
+            </tr>
+            <tr>
+              <td style="padding: 12px 0; font-size: 18px; font-weight: 700; color: #222;">Total</td>
+              <td style="padding: 12px 0; text-align: right; font-size: 18px; font-weight: 700; color: #0A98E0;"
+                id="cart-total">$0.00</td>
+            </tr>
+          </table>
+          <button class="normal" id="checkout-btn"
+            style="width: 100%; background-color: #0A98E0; color: white; padding: 15px; margin-top: 20px; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 16px; transition: 0.3s;">
+            Proceed to Checkout
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Empty Cart Message (hidden by default) -->
+    <section id="empty-cart" class="section-p1" style="display: none; text-align: center;">
+      <i class="fas fa-shopping-cart" style="font-size: 60px; color: #ccc; margin-bottom: 20px;"></i>
+      <h2 style="color: #222; margin-bottom: 15px;">Your Cart is Empty</h2>
+      <p style="color: #666; margin-bottom: 30px;">Start shopping to add items to your cart</p>
+      <a href="shop all.html" class="normal"
+        style="display: inline-block; background-color: #0A98E0; color: white; padding: 15px 40px; border-radius: 4px; text-decoration: none; font-weight: 600;">
+        Continue Shopping
+      </a>
+    </section>
+
+    <!-- CHECKOUT MODAL (Hidden by default) -->
+    <div id="checkout-modal"
+      style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999; overflow-y: auto; padding: 20px 0;">
+      <div
+        style="max-width: 600px; background: white; margin: 40px auto; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.25); padding: 30px;">
+
+        <!-- Close button -->
+        <button id="close-checkout"
+          style="position: absolute; top: 20px; right: 20px; background: transparent; border: none; font-size: 24px; cursor: pointer; color: #666;">✕</button>
+
+        <h2 style="color: #0A98E0; margin-bottom: 30px;">Checkout</h2>
+
+        <!-- Delivery Address Section -->
+        <div style="margin-bottom: 35px;">
+          <h3 style="color: #222; margin-bottom: 15px; font-size: 18px;">📍 Delivery Address</h3>
+
+          <div style="margin-bottom: 12px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #222;">Full Name *</label>
+            <input type="text" id="full-name" placeholder="Enter your full name"
+              style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; box-sizing: border-box;">
+          </div>
+
+          <div style="margin-bottom: 12px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #222;">Phone Number *</label>
+            <input type="tel" id="phone" placeholder="+234..."
+              style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; box-sizing: border-box;">
+          </div>
+
+          <div style="margin-bottom: 12px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #222;">Address *</label>
+            <textarea id="address" placeholder="Street address, apartment, etc."
+              style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; box-sizing: border-box; resize: vertical; min-height: 80px;"></textarea>
+          </div>
+
+          <div style="display: flex; gap: 12px;">
+            <div style="flex: 1;">
+              <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #222;">City *</label>
+              <input type="text" id="city" placeholder="Lagos"
+                style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; box-sizing: border-box;">
+            </div>
+            <div style="flex: 1;">
+              <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #222;">Postal Code</label>
+              <input type="text" id="postal" placeholder="Postal code"
+                style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; box-sizing: border-box;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment Method Section -->
+        <div style="margin-bottom: 35px;">
+          <h3 style="color: #222; margin-bottom: 15px; font-size: 18px;">💳 Payment Method</h3>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <!-- Visa -->
+            <label
+              style="display: flex; align-items: center; padding: 12px; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; transition: all 0.2s;">
+              <input type="radio" name="payment" value="visa" style="margin-right: 10px; cursor: pointer;">
+              <span style="flex: 1;">
+                <strong style="color: #0A98E0;">Visa/Mastercard</strong><br>
+                <small style="color: #666;">Credit/Debit Card</small>
+              </span>
+              <i class="fab fa-cc-visa" style="font-size: 24px; color: #1434CB;"></i>
+            </label>
+
+            <!-- EasyPaisa -->
+            <label
+              style="display: flex; align-items: center; padding: 12px; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; transition: all 0.2s;">
+              <input type="radio" name="payment" value="easypaisa" style="margin-right: 10px; cursor: pointer;">
+              <span style="flex: 1;">
+                <strong style="color: #0A98E0;">EasyPaisa</strong><br>
+                <small style="color: #666;">Mobile Wallet</small>
+              </span>
+              <i style="font-size: 24px;"><img src="images/easypaisa.jpg" alt=""></i>
+            </label>
+
+            <!-- Bank Transfer -->
+            <label
+              style="display: flex; align-items: center; padding: 12px; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; transition: all 0.2s;">
+              <input type="radio" name="payment" value="bank" style="margin-right: 10px; cursor: pointer;">
+              <span style="flex: 1;">
+                <strong style="color: #0A98E0;">Bank Transfer</strong><br>
+                <small style="color: #666;">Direct Transfer</small>
+              </span>
+              <i class="fas fa-university" style="font-size: 24px; color: #2E7D32;"></i>
+            </label>
+
+            <!-- JazzCash -->
+            <label
+              style="display: flex; align-items: center; padding: 12px; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; transition: all 0.2s;">
+              <input type="radio" name="payment" value="jazzcash" style="margin-right: 10px; cursor: pointer;">
+              <span style="flex: 1;">
+                <strong style="color: #0A98E0;">JazzCash</strong><br>
+                <small style="color: #666;">Mobile Money</small>
+              </span>
+              <i style="font-size: 24px;"><img src="images/jazzcash.png" alt=""></i>
+            </label>
+
+            <label
+              style="display: flex; align-items: center; padding: 12px; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; transition: all 0.2s;">
+              <input type="radio" name="payment" value="jazzcash" style="margin-right: 10px; cursor: pointer;">
+              <span style="flex: 1;">
+                <strong style="color: #0A98E0;">Cash on Delivery</strong><br>
+                <small style="color: #666;">Check and Pay</small>
+              </span>
+              <i class="fas fa-wallet jazzcash-icon" style="font-size: 24px; color: #E91E63;"></i>
+            </label>
+          </div>
+        </div>
+
+        <!-- Order Summary in Modal -->
+        <div
+          style="background: #f5f7ff; padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #0A98E0;">
+          <h4 style="color: #0A98E0; margin-bottom: 10px;">Order Total</h4>
+          <div style="display: flex; justify-content: space-between; font-weight: 600; color: #222;">
+            <span>Total Amount:</span>
+            <span id="checkout-total" style="color: #0A98E0; font-size: 18px;">$0.00</span>
+          </div>
+        </div>
+
+        <!-- Agree & Place Order -->
+        <label style="display: flex; align-items: center; margin-bottom: 20px; cursor: pointer;">
+          <input type="checkbox" id="agree-terms" style="margin-right: 8px; cursor: pointer;">
+          <span style="color: #666; font-size: 14px;">I agree to the <a href="#"
+              style="color: #0A98E0; text-decoration: none; font-weight: 600;">terms & conditions</a></span>
+        </label>
+
+        <!-- Place Order Button -->
+        <button id="place-order-btn"
+          style="width: 100%; background: linear-gradient(90deg, #0A98E0, #0787c7); color: white; padding: 14px; border: none; border-radius: 8px; font-weight: 700; font-size: 16px; cursor: pointer; transition: 0.3s;">
+          Place Order
+        </button>
+      </div>
+    </div>
+
+    <!-- Custom Styled Alert Modal -->
+    <div id="custom-alert-modal"
+      style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 10000; display: flex; align-items: center; justify-content: center;">
+      <div
+        style="background: white; border-radius: 12px; padding: 40px; max-width: 500px; width: 90%; box-shadow: 0 20px 60px rgba(0,0,0,0.3); text-align: center; animation: slideIn 0.3s ease;">
+        <div id="alert-icon" style="font-size: 60px; margin-bottom: 20px;">✓</div>
+        <h2 id="alert-title" style="color: #0A98E0; margin-bottom: 15px; font-size: 24px;">Success!</h2>
+        <p id="alert-message" style="color: #666; margin-bottom: 30px; font-size: 16px; line-height: 1.6;">Your order
+          has been placed successfully.</p>
+        <button id="alert-close-btn"
+          style="background: linear-gradient(90deg, #0A98E0, #0787c7); color: white; padding: 12px 40px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 16px; transition: 0.3s;">
+          OK
+        </button>
+      </div>
+    </div>
+
+    <style>
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      #custom-alert-modal {
+        display: none !important;
+      }
+
+      #custom-alert-modal.show {
+        display: flex !important;
+      }
+
+      #alert-close-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(10, 152, 224, 0.3);
+      }
+    </style>
+
+    <!-- Footer -->
+    <footer class="section-p1">
+      <div class="col">
+        <a href="index.html"><img class="logo" src="images/FF TRADERS4.png" alt="FF Traders Logo" width="100"
+            height="100" loading="lazy"></a>
+        <h4 style="color: #0A98E0;">Contact</h4>
+        <p style="color: white;"><strong>Address:</strong> 349, Olorilogbon street, Onigbogbo Lagos</p>
+        <p style="color: white;"><strong>Phone:</strong> +23456876199, +23458903120</p>
+        <div class="follow">
+          <h4 style="color: #0A98E0;">Follow Us</h4>
+          <div class="icon">
+            <i class="fab fa-facebook-f" style="color: #0A98E0;"></i>
+            <i class="fab fa-instagram" style="color: #0A98E0;"></i>
+            <i class="fab fa-twitter" style="color: #0A98E0;"></i>
+            <i class="fab fa-youtube" style="color: #0A98E0;"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="col">
+          <h4 style="color:#0A98E0;">About</h4>
+          <a href="#" style="color: white;">About Us</a>
+          <a href="#" style="color: white;">Delivery Information</a>
+          <a href="#" style="color: white;">Privacy Policy</a>
+          <a href="#" style="color: white;">Terms & Conditions</a>
+          <a href="#" style="color: white;">Contact Us</a>
+        </div>
+
+        <div class="col">
+          <h4 style="color: #0A98E0;">My Account</h4>
+          <a href="#" style="color: white;">Sign In</a>
+          <a href="cart.html" style="color: white;">View Cart</a>
+          <a href="#" style="color: white;">My Account</a>
+          <a href="#" style="color: white;">My Wishlist</a>
+          <a href="#" style="color: white;">Track Order</a>
+          <a href="#" style="color: white;">Help</a>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p style="color: white;">© 2024 FF TRADERS. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+
+</html>

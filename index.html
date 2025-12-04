@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="icon" href="images/favicon.png">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 
     <!-------------------------Font Awesome Icons --------------->
     <script src="https://kit.fontawesome.com/dad03e859c.js" crossorigin="anonymous"></script>
@@ -22,20 +21,37 @@
       rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900;&display=swap">
+
+
   </head>
 
   <body>
     <section id="header">
       <a href="index.html">
-        <img src="images/ff trader.png" alt="FF Traders Logo" width="100" height="100" loading="lazy">
+        <img src="images/FF TRADERS4.png" alt="FF Traders Logo" width="80px" height="75px" loading="lazy">
       </a>
       <div>
         <ul id="navbar">
           <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="shop all.html">Shop All</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Our Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li class="dropdown">
+            <a href="contact.html">Our Services</a>
+            <ul class=" dropdown-menu">
+              <li><a href="it-solutions.html">IT Solutions</a></li>
+              <li><a href="#">Real Estate</a></li>
+              <li><a href="#">Import & Export</a></li>
+              <li><a href="#">E-Commerce Products</a></li>
+              <li><a href="#">Physiotherapy Equipment</a></li>
+            </ul>
+          </li>
           <li><a href="contact.html">Contact Us</a></li>
+          <li class="cart-item">
+            <a href="cart.html" class="cart-link" aria-label="View cart">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </a>
+          </li>
           <li><a href="#" id="close"><i class="far fa-times"></i></a></li>
         </ul>
         <div class="menu-icon" id="bar">
@@ -57,8 +73,34 @@
       <h4>Your Trusted Partner in IT Solutions, Real Estate,</h4>
       <h4>Import & Export, Electronics & E-Commerce</h4>
       <p>Delivering innovation, trust, and quality across multiple industries in Pakistan.</p>
-      <button><a href="services.html">Services Overview</a></button>
-      <button><a href="contact.html">Contact Us</a></button>
+      <button style="  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 60px;
+  padding: 15px 17px;
+  width: 210px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap; /* ← keeps text in one line */
+  margin: 10px 0;;"><a href="services.html">Our Services
+        </a></button>
+      <button style="  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 60px;
+  padding: 15px 25px;
+  width: 200px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap; /* ← keeps text in one line */
+  margin: 10px 0;"><a href="contact.html">Contact
+          Us</a></button>
     </section>
 
     <!-- Who We Are Section -->
@@ -77,56 +119,58 @@
       <p>Delivering reliable solutions for your business.</p>
       <div class="pro-container">
         <div class="pro">
-          <img src="images/html-css-collage-concept-with-person.png" alt="IT Solutions Service Image" height="200px"
-            width="300px" loading="lazy">
-          <div class="des">
-            <h3 style="color: #0A98E0;">🔹 IT Solutions</h3>
-            <p>Complete IT services for businesses, including website development, software solutions, IT support,
-              ecommerce setup, and digital tools.</p>
-          </div>
-        </div>
-
-        <div class="pro">
-          <img src="images/sales-agent-using-laptop.png" alt="Real Estate Service Image" height="200px" width="300px"
-            loading="lazy">
-          <div class="des">
-            <h3 style="color: #0A98E0;">🔹 Real Estate Services</h3>
-            <p>Premium consultancy for buying, selling, and investment opportunities in commercial and residential
-              properties.</p>
-          </div>
-        </div>
-
-        <div class="pro">
-          <img src="images/shipping-containers-cargo-port.png" alt="Import and Export Service Image" height="200px"
-            width="300px" loading="lazy">
-          <div class="des">
-            <h3 style="color: #0A98E0;">🔹 Import & Export</h3>
-            <p>Reliable international trading services covering general commodities, electronics, beauty equipment, and
-              business goods.</p>
-          </div>
-        </div>
-
-        <div class="pro-container2">
-          <div class="pro">
-            <img src="images/patient-doing-exercise-using-sports-equipment-with-therapist.png"
-              alt="Physiotherapy Equipment Image" height="200px" width="300px" loading="lazy">
+          <a href="services.html"> <img src="images/html-css-collage-concept-with-person.png"
+              alt="IT Solutions Service Image" height="200px" width="300px" loading="lazy">
             <div class="des">
-              <h3 style="color: #0A98E0;">🔹 Physiotherapy Electronic Equipment</h3>
-              <p>We supply high-quality physiotherapy and medical electronic devices to clinics, hospitals, and
-                individuals.</p>
-            </div>
-          </div>
-          <div class="pro">
-            <img src="images/laptop-blank-screen-hopping-cart-full-gifts-with-copyspace-online-shopping-concept.png"
-              alt="E-Commerce Products Image" height="200px" width="300px" loading="lazy">
-            <div class="des">
-              <h3 style="color: #0A98E0;">🔹 E-Commerce Products</h3>
-              <p>A wide range of original products including gadgets, electronics, personal care devices, and
-                more—delivered
-                across Pakistan.</p>
-            </div>
+              <h3>🔹 IT Solutions</h3>
+              <p>Complete IT services for businesses, including website development, software
+                solutions, IT support,
+                ecommerce setup, and digital tools.</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="pro">
+        <img src="images/sales-agent-using-laptop.png" alt="Real Estate Service Image" height="200px" width="300px"
+          loading="lazy">
+        <div class="des">
+          <h3 style="color: #0A98E0;">🔹 Real Estate Services</h3>
+          <p>Premium consultancy for buying, selling, and investment opportunities in commercial and residential
+            properties.</p>
+        </div>
+      </div>
+
+      <div class="pro">
+        <img src="images/shipping-containers-cargo-port.png" alt="Import and Export Service Image" height="200px"
+          width="300px" loading="lazy">
+        <div class="des">
+          <h3 style="color: #0A98E0;">🔹 Import & Export</h3>
+          <p>Reliable international trading services covering general commodities, electronics, beauty equipment, and
+            business goods.</p>
+        </div>
+      </div>
+
+      <div class="pro-container2">
+        <div class="pro">
+          <img src="images/patient-doing-exercise-using-sports-equipment-with-therapist.png"
+            alt="Physiotherapy Equipment Image" height="200px" width="300px" loading="lazy">
+          <div class="des">
+            <h3 style="color: #0A98E0;">🔹 Physiotherapy Electronic Equipment</h3>
+            <p>We supply high-quality physiotherapy and medical electronic devices to clinics, hospitals, and
+              individuals.</p>
           </div>
         </div>
+        <div class="pro">
+          <img src="images/laptop-blank-screen-hopping-cart-full-gifts-with-copyspace-online-shopping-concept.png"
+            alt="E-Commerce Products Image" height="200px" width="300px" loading="lazy">
+          <div class="des">
+            <h3 style="color: #0A98E0;">🔹 E-Commerce Products</h3>
+            <p>A wide range of original products including gadgets, electronics, personal care devices, and
+              more—delivered
+              across Pakistan.</p>
+          </div>
+        </div>
+      </div>
       </div>
     </section>
 
@@ -254,45 +298,43 @@
     <!-- Footer -->
     <footer class="section-p1">
       <div class="col">
-        <a href="#"><img class="logo" src="images/ff trader.png" alt="FF Traders Logo" width="100" height="100"
+        <a href="#"><img class="logo" src="images/FF TRADERS4.png" alt="FF Traders Logo" width="100" height="100"
             loading="lazy"></a>
-        <h4>Contact</h4>
-        <p><strong>Address:</strong> 349, Olorilogbon street, Onigbogbo Lagos</p>
-        <p><strong>Phone:</strong> +23456876199, +23458903120</p>
-        <p><strong>Hours:</strong> 10.00 - 18.00, Mon - Sat</p>
+        <h4 style="color: #0A98E0;">Contact</h4>
+        <p style="color: white;"><strong>Address:</strong> 349, Olorilogbon street, Onigbogbo Lagos</p>
+        <p style="color: white;"><strong>Phone:</strong> +23456876199, +23458903120</p>
         <div class="follow">
-          <h4>Follow Us</h4>
+          <h4 style="color: #0A98E0;">Follow Us</h4>
           <div class="icon">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-youtube"></i>
-            <i class="fab fa-pinterest-p"></i>
+            <i class="fab fa-facebook-f" style="color: #0A98E0;"></i>
+            <i class="fab fa-instagram" class="fab fa-twitter" style="color: #0A98E0;"></i>
+            <i class="fab fa-youtube" style="color: #0A98E0;"></i>
+            <i class="fab fa-pinterest-p" style="color: #0A98E0;"></i>
           </div>
         </div>
       </div>
 
       <div class="sec">
         <div class="col">
-          <h4>About</h4>
-          <a href="#">About Us</a>
-          <a href="#">Delivery Information</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms and Condition</a>
-          <a href="#">Contact Us</a>
+          <h4 style="color:#0A98E0;">About</h4>
+          <a href="#" style="color: white;">About Us</a>
+          <a href="#" style="color: white;">Delivery Information</a>
+          <a href="#" style="color: white;">Privacy Policy</a>
+          <a href="#" style="color: white;">Terms and Condition</a>
+          <a href="#" style="color: white;">Contact Us</a>
         </div>
 
         <div class="col">
-          <h4>My Account</h4>
-          <a href="#">Sign In</a>
-          <a href="#">View Cart</a>
-          <a href="#">My Account</a>
-          <a href="#">My Wishlist</a>
-          <a href="#">Track my Order</a>
-          <a href="#">Help</a>
+          <h4 style="color: #0A98E0;">My Account</h4>
+          <a href="#" style="color: white;">Sign In</a>
+          <a href="#" style="color: white;">View Cart</a>
+          <a href="#" style="color: white;">My Account</a>
+          <a href="#" style="color: white;">My Wishlist</a>
+          <a href="#" style="color: white;">Track my Order</a>
+          <a href="#" style="color: white;">Help</a>
         </div>
 
-        <div class="col install">
+        <!-- <div class="col install">
           <h4>Install App</h4>
           <p>From App Store or Google Play</p>
           <div class="row">
@@ -300,15 +342,15 @@
               loading="lazy">
             <img src="https://i.postimg.cc/7YvyWTS6/play.jpg" alt="Google Play Badge" width="200" height="70"
               loading="lazy">
-          </div>
-          <p>Secured Payment Gateways</p>
-          <img src="https://i.postimg.cc/kgfzqVRW/pay.png" alt="Payment Gateways Icons" width="300" height="70"
-            loading="lazy">
-        </div>
+          </div> -->
+        <p style="color: white;">Secured Payment Gateways</p>
+        <!-- <img src="https://i.postimg.cc/kgfzqVRW/pay.png" alt="Payment Gateways Icons" width="300" height="70"
+          loading="lazy"> -->
+      </div>
       </div>
 
       <div class="coypright">
-        <p>© 2023 All rights reserved! made by Tunrayo</p>
+        <p style="color: white;">© 2023 All rights reserved! made by Tunrayo</p>
       </div>
     </footer>
 

@@ -60,14 +60,14 @@ body {
 #header {
   position: fixed;
   width: 100%;
-  height: 100px;
-  overflow: hidden;
+  height: 80px;
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px 80px;
-  background-color: #E3E6F3;
+  background-color: black;
+  color: white;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06)
 }
 
@@ -111,7 +111,7 @@ body {
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
-  color: #1a1a1a;
+  color: white;
   transition: 0.3s ease
 }
 
@@ -119,6 +119,105 @@ body {
 #navbar li a.active {
   color: #0A98E0;
 }
+
+
+
+/* Add this after your #navbar li a:hover,active styles */
+
+/* Professional Dropdown Menu */
+/* Dropdown: sit flush under the parent link (no gap) */
+.dropdown {
+  position: relative;
+}
+
+/* updated dropdown-menu: no extra margin, small hidden offset */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  /* exactly at bottom of parent */
+  left: 0;
+  margin-top: 0;
+  /* remove gap */
+  background: black;
+  color: white;
+  min-width: 220px;
+  padding: 8px 0;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  display: flex;
+  /* keep flex so transitions work */
+  flex-direction: column;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  /* slight lift while hidden to animate in */
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  border-top: 3px solid #0A98E0;
+  pointer-events: none;
+}
+
+/* show immediately on hover; keep visible while hovering the box */
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0s;
+}
+
+/* optional small arrow — adjust 'left' to align under the link */
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 26px;
+  width: 12px;
+  height: 12px;
+  background: #0A98E0;
+  transform: rotate(45deg);
+  box-shadow: -3px -3px 6px rgba(0, 0, 0, 0.04);
+  z-index: 0;
+}
+
+.dropdown-menu li {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 12px 24px;
+  color: #222;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.dropdown-menu li a:hover {
+  background-color: black;
+  color: black;
+  border-left-color: #0A98E0;
+  padding-left: 28px;
+}
+
+.dropdown-menu li:first-child a:hover {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.dropdown-menu li:last-child a:hover {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Remove the old dropdown-scroll styles and replace with above */
+
+
+
 
 #navbar li a:hover::after,
 #navbar li a.active::after {
@@ -130,6 +229,53 @@ body {
   position: absolute;
   bottom: -4px;
   left: 20px;
+}
+
+/* Navbar cart style (placed after Contact Us) */
+#navbar .cart-item {
+  list-style: none;
+  position: relative;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+}
+
+#navbar .cart-link {
+  color: white;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+#navbar .cart-link:hover {
+  color: #0A98E0;
+}
+
+/* small round badge for item count */
+#navbar .cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: #ff3b30;
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  line-height: 1;
+  min-width: 18px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* mobile adjustments */
+@media (max-width: 920px) {
+  #navbar .cart-item {
+    padding-left: 0;
+    margin-top: 8px;
+  }
 }
 
 #hero {
@@ -159,23 +305,29 @@ body {
 }
 
 #hero button {
-  background-image: url(https://i.postimg.cc/528H2mmS/button.png);
+
   background-color: transparent;
   font-weight: bolder;
   text-decoration: none;
-  color: #0A98E0;
+  color: white;
   border: 0;
   padding: 14px 80px 14px 50px;
   cursor: pointer;
 }
 
+#hero button img {
+  height: 50px;
+  width: 100px;
+}
+
 a {
   text-decoration: none;
-  color: #0A98E0;
+  color: white;
 }
 
 #hero button a:hover {
-  color: #041e42;
+  color: #0A98E0;
+
 }
 
 .who {
@@ -282,7 +434,7 @@ a {
   height: 390px;
   min-width: 250px;
   padding: 10px 12px;
-  border: 1px solid #cce7d0;
+  border: 1px solid #0787c7;
   border-radius: 25px;
   cursor: pointer;
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
@@ -293,8 +445,11 @@ a {
 
 
 
+
 #product1 .pro:hover {
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+  box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.06);
+  width: 33%;
+  height: 420px;
 }
 
 #product1 .pro img {
@@ -556,12 +711,13 @@ button.white {
 }
 
 footer {
+  background-color: black;
+  color: white;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   position: relative;
 }
-
 
 footer .col {
   display: flex;
@@ -879,7 +1035,7 @@ footer .copyright {
     right: -300px;
     height: 100vh;
     width: 300px;
-    background-color: #E3E6F3;
+    background-color: black;
     flex-direction: column;
     padding-top: 80px;
     transition: 0.3s;
@@ -997,4 +1153,204 @@ footer .copyright {
   bottom: 20px;
   right: 10px;
 
+}
+
+.dropdown-scroll {
+  max-height: 200px;
+  /* max height before scrolling */
+  overflow-y: auto;
+  background-color: #E3E6F3;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  display: none;
+  z-index: 1000;
+}
+
+#navbar li:hover .dropdown-scroll {
+  display: block;
+}
+
+.dropdown-scroll li {
+  padding: 10px;
+}
+
+.dropdown-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dropdown-scroll::-webkit-scrollbar-thumb {
+  background-color: #0A98E0;
+  border-radius: 10px;
+}
+
+/* PAGE HERO */
+.services-hero {
+  padding: 120px 20px;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.services-hero h1 {
+  font-size: 50px;
+  letter-spacing: 1px;
+}
+
+.services-hero p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* SERVICES SECTION */
+.services-section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.service-card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+.service-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-img img {
+  width: 350px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-content h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #0A98E0;
+}
+
+.service-content p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* toast notification for add-to-cart */
+.toast {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  min-width: 220px;
+  max-width: 320px;
+  background: rgba(10, 153, 224, 0.98);
+  /* blue accent */
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+  transform: translateY(-8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 99999;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* visible state */
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* success style */
+.toast.success {
+  background: linear-gradient(90deg, #0A98E0, #0787c7);
+}
+
+/* optional small icon */
+.toast .icon {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 14px;
+}
+
+/* close button */
+.toast .close {
+  margin-left: auto;
+  cursor: pointer;
+  opacity: 0.9;
+  font-size: 14px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Add-to-cart button */
+.add-to-cart {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 2px solid #0A98E0;
+  color: #0A98E0;
+  padding: 10px 14px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.18s ease, color 0.18s ease, transform 0.12s ease, box-shadow 0.18s ease;
+}
+
+/* icon size */
+.add-to-cart .cart {
+  font-size: 16px;
+}
+
+/* hover */
+.add-to-cart:hover {
+  background: #0A98E0;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* pressed / active */
+.add-to-cart:active {
+  transform: translateY(0);
+}
+
+/* temporary "added" state (applied by JS) */
+.add-to-cart.added {
+  background: linear-gradient(90deg, #0A98E0, #0787c7);
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(10, 152, 224, 0.20);
+  transform: translateY(-2px) scale(0.995);
+}
+
+/* check icon spacing when showing "Added" */
+.add-to-cart i.fal.fa-check {
+  margin-right: 6px;
+  font-size: 14px;
 }

@@ -15,14 +15,31 @@
   <body>
 
     <section id="header">
-      <a href="index.html"><img src="images/ff trader.png" height="100px" width="100px"></a>
+      <a href="index.html">
+        <img src="images/FF TRADERS4.png" alt="FF Traders Logo" width="80px" height="75px" loading="lazy">
+      </a>
       <div>
         <ul id="navbar">
           <li><a href="index.html">Home</a></li>
+          <li><a href="shop all.html">Shop All</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Our Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li class="dropdown">
+            <a href="#">Our Services</a>
+            <ul class=" dropdown-menu">
+              <li><a href="#">IT Solutions</a></li>
+              <li><a href="#">Real Estate</a></li>
+              <li><a href="#">Import & Export</a></li>
+              <li><a href="#">E-Commerce Products</a></li>
+              <li><a href="#">Physiotherapy Equipment</a></li>
+            </ul>
+          </li>
           <li><a href="contact.html" class="active">Contact Us</a></li>
+          <li class="cart-item">
+            <a href="cart.html" class="cart-link" aria-label="View cart">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </a>
+          </li>
           <li><a href="#" id="close"><i class="far fa-times"></i></a></li>
         </ul>
         <div class="menu-icon" id="bar">
@@ -32,104 +49,204 @@
         </div>
       </div>
       <div id="mobile">
-        <a href="cart.html"><i class="fal fa-shopping-bag"></i><span class="quantity">0</span></a>
+        <a href="cart.html"><i class="fal fa-shopping-bag"></i>
+          <span class="quantity">0</span>
+        </a>
       </div>
     </section>
 
-    <section id="hero" style="background-image: url('images/contact-bg.jpg');">
+    <section id="hero" style="background-image: url('images/SL-113022-54210-29.jpg');">
       <h1>Contact Us</h1>
       <h4>We’d love to hear from you</h4>
-      <p>Reach out for inquiries, support, or business opportunities. Our team is ready to assist.</p>
+      <p style="color: black;">Reach out for inquiries, support, or business opportunities. Our team is ready to
+        assist.
+      </p>
     </section>
 
-    <section class="section-p1" id="contact">
-      <div class="pro-container">
-        <div class="pro">
-          <div class="des">
-            <h3 style="color: #0A98E0;">Contact Details</h3>
-            <p><strong>Address:</strong> 349, Olorilogbon street, Onigbogbo Lagos</p>
-            <p><strong>Phone:</strong> +23456876199, +23458903120</p>
-            <p><strong>Email:</strong> info@fftraders.com</p>
-            <p><strong>Hours:</strong> 10.00 - 18.00, Mon - Sat</p>
+    <!-- Main Contact Section -->
+    <section class="section-p1">
+      <div style="max-width: 1200px;  margin: top 0px;;">
+
+        <!-- Contact Info Cards -->
+        <div
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 60px;">
+
+          <!-- Phone Card -->
+          <div
+            style="background: black;color: white; padding: 30px; border-radius: 12px; text-align: center; border-left: 4px solid #0A98E0; box-shadow: 0 4px 12px rgba(10,152,224,0.1);">
+            <i class="fas fa-phone" style="font-size: 36px; color: #0A98E0; margin-bottom: 15px; display: block;"></i>
+            <h3 style="color: white; margin-bottom: 10px;">Phone</h3>
+            <p style="color: white; margin-bottom: 5px;"><strong>+234 (0)56 876 199</strong></p>
+            <p style="color: white;"><strong>+234 (0)58 903 120</strong></p>
+          </div>
+
+          <!-- Email Card -->
+          <div
+            style="background: black; padding: 30px; border-radius: 12px; text-align: center; border-left: 4px solid #0A98E0; box-shadow: 0 4px 12px rgba(10,152,224,0.1);">
+            <i class="fas fa-envelope"
+              style="font-size: 36px; color: #0A98E0; margin-bottom: 15px; display: block;"></i>
+            <h3 style="color: white; margin-bottom: 10px;">Email</h3>
+            <p style="color: white;"><a href="mailto:info@fftraders.com"
+                style="color: #0A98E0; text-decoration: none; font-weight: 600;">info@fftraders.com</a></p>
+            <p style="color: white; margin-top: 5px;">We'll reply within 24 hours</p>
+          </div>
+
+          <!-- Location Card -->
+          <div
+            style="background: black; padding: 30px; border-radius: 12px; text-align: center; border-left: 4px solid #0A98E0; box-shadow: 0 4px 12px rgba(10,152,224,0.1);">
+            <i class="fas fa-map-marker-alt"
+              style="font-size: 36px; color: #0A98E0; margin-bottom: 15px; display: block;"></i>
+            <h3 style="color: white; margin-bottom: 10px;">Visit Us</h3>
+            <p style="color: white;"><strong>349, Olorilogbon Street</strong></p>
+            <p style="color: white;">Onigbogbo, Lagos, Nigeria</p>
+          </div>
+
+          <!-- Hours Card -->
+          <div
+            style="background: black; padding: 30px; border-radius: 12px; text-align: center; border-left: 4px solid #0A98E0; box-shadow: 0 4px 12px rgba(10,152,224,0.1);">
+            <i class="fas fa-clock" style="font-size: 36px; color: #0A98E0; margin-bottom: 15px; display: block;"></i>
+            <h3 style="color: white; margin-bottom: 10px;">Business Hours</h3>
+            <p style="color:  white;"><strong>Mon - Sat</strong></p>
+            <p style="color:  white;">10:00 AM - 6:00 PM</p>
           </div>
         </div>
-        <div class="pro">
-          <div class="des">
-            <h3 style="color: #0A98E0;">Send a Message</h3>
-            <form action="#" method="post">
-              <input type="text" name="name" placeholder="Your Name" required>
-              <input type="email" name="email" placeholder="Your Email" required>
-              <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-              <button class="btn normal" type="submit">Send Message</button>
-            </form>
+
+        <!-- Contact Form Section -->
+        <div
+          style="background: linear-gradient(135deg, black 0%, black 100%); padding: 50px; border-radius: 16px; border: 2px solid #0A98E0; box-shadow: 0 10px 40px rgba(10,152,224,0.1);">
+          <h2 style="color: #0A98E0; margin-bottom: 10px; font-size: 32px;">Send us a Message</h2>
+          <p style="color: white; margin-bottom: 30px; font-size: 16px;">Have a question? We'd love to hear from you.
+            Send us a message and we'll respond as soon as possible.</p>
+
+          <form id="contact-form" style="display: grid; gap: 20px;">
+
+            <!-- Name Field -->
+            <div>
+              <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #0A98E0;">Full Name </label>
+              <input type="text" name="name" placeholder="Enter your full name" required
+                style="width: 100%; padding: 12px 16px; border: 2px solid #0A98E0; border-radius: 8px; font-size: 14px; box-sizing: border-box; transition: 0.3s;">
+            </div>
+
+            <!-- Email Field -->
+            <div>
+              <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #0A98E0;">Email Address
+              </label>
+              <input type="email" name="email" placeholder="your.email@example.com" required
+                style="width: 100%; padding: 12px 16px; border: 2px solid #0A98E0; border-radius: 8px; font-size: 14px; box-sizing: border-box; transition: 0.3s;">
+            </div>
+
+            <!-- Phone Field -->
+            <div>
+              <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #0A98E0;">Phone Number</label>
+              <input type="tel" name="phone" placeholder="+92..."
+                style="width: 100%; padding: 12px 16px; border: 2px solid #0A98E0; border-radius: 8px; font-size: 14px; box-sizing: border-box; transition: 0.3s;">
+            </div>
+
+            <!-- Subject Field -->
+            <div>
+              <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #0A98E0;">Subject </label>
+              <select name="subject" required
+                style="width: 100%; padding: 12px 16px; border: 2px solid #0A98E0; border-radius: 8px; font-size: 14px; box-sizing: border-box; background: white;">
+                <option value="">Select a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="support">Customer Support</option>
+                <option value="business">Business Opportunity</option>
+                <option value="feedback">Feedback</option>
+                <option value="order">Order Related</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <!-- Message Field -->
+            <div>
+              <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #0A98E0;">Message *</label>
+              <textarea name="message" placeholder="Please share your message or inquiry here..." rows="6" required
+                style="width: 100%; padding: 12px 16px; border: 2px solid #0A98E0; border-radius: 8px; font-size: 14px; box-sizing: border-box; resize: vertical; transition: 0.3s; font-family: inherit;"></textarea>
+            </div>
+
+            <!-- Checkbox -->
+            <label style="display: flex; align-items: center; cursor: pointer;">
+              <input type="checkbox" name="agree" required style="margin-right: 8px; cursor: pointer;">
+              <span style="color: #0A98E0;">I agree to be contacted about my inquiry</span>
+            </label>
+
+            <!-- Submit Button -->
+            <button type="submit"
+              style="background: linear-gradient(90deg, #0A98E0, #0787c7); color: white; padding: 14px 30px; border: none; border-radius: 8px; font-weight: 700; font-size: 16px; cursor: pointer; transition: 0.3s; box-shadow: 0 6px 20px rgba(10,152,224,0.25);">
+              <i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Send Message
+            </button>
+          </form>
+
+          <!-- Success Message (Hidden) -->
+          <div id="form-success"
+            style="display: none; background: #d4edda; border: 2px solid #28a745; color: #155724; padding: 15px; border-radius: 8px; margin-top: 20px; text-align: center;">
+            <i class="fas fa-check-circle" style="margin-right: 8px;"></i>
+            <strong>Thank you!</strong> Your message has been sent successfully. We'll get back to you soon.
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- Footer copied exactly from index.html -->
-    <footer class="section-p1">
 
+    <!-- Footer -->
+    <footer class="section-p1">
       <div class="col">
-        <a href="#"><img class="logo" src="https://i.postimg.cc/x8ncvFjr/logo.png"></a>
-        <h4>Contact</h4>
-        <p><strong>Address:</strong> 349, Olorilogbon street, Onigbogbo Lagos</p>
-        <p><strong>Phone:</strong> +23456876199, +23458903120</p>
-        <p><strong>Hours:</strong> 10.00 - 18.00, Mon - Sat</p>
+        <a href="#"><img class="logo" src="images/FF TRADERS4.png" alt="FF Traders Logo" width="100" height="100"
+            loading="lazy"></a>
+        <h4 style="color: #0A98E0;">Contact</h4>
+        <p style="color: white;"><strong>Address:</strong> 349, Olorilogbon street, Onigbogbo Lagos</p>
+        <p style="color: white;"><strong>Phone:</strong> +23456876199, +23458903120</p>
         <div class="follow">
-          <h4>Follow Us</h4>
+          <h4 style="color: #0A98E0;">Follow Us</h4>
           <div class="icon">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-youtube"></i>
-            <i class="fab fa-pinterest-p"></i>
+            <i class="fab fa-facebook-f" style="color: #0A98E0;"></i>
+            <i class="fab fa-instagram" class="fab fa-twitter" style="color: #0A98E0;"></i>
+            <i class="fab fa-youtube" style="color: #0A98E0;"></i>
+            <i class="fab fa-pinterest-p" style="color: #0A98E0;"></i>
           </div>
         </div>
       </div>
 
       <div class="sec">
         <div class="col">
-          <h4>About</h4>
-          <a href="#">About Us</a>
-          <a href="#">Delivery Information</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms and Condition</a>
-          <a href="#">Contact Us</a>
+          <h4 style="color:#0A98E0;">About</h4>
+          <a href="#" style="color: white;">About Us</a>
+          <a href="#" style="color: white;">Delivery Information</a>
+          <a href="#" style="color: white;">Privacy Policy</a>
+          <a href="#" style="color: white;">Terms and Condition</a>
+          <a href="#" style="color: white;">Contact Us</a>
         </div>
 
         <div class="col">
-          <h4>My Account</h4>
-          <a href="#">Sign In</a>
-          <a href="#">View Cart</a>
-          <a href="#">My Account</a>
-          <a href="#">My Wishlist</a>
-          <a href="#">Track my Order</a>
-          <a href="#">Help</a>
+          <h4 style="color: #0A98E0;">My Account</h4>
+          <a href="#" style="color: white;">Sign In</a>
+          <a href="#" style="color: white;">View Cart</a>
+          <a href="#" style="color: white;">My Account</a>
+          <a href="#" style="color: white;">My Wishlist</a>
+          <a href="#" style="color: white;">Track my Order</a>
+          <a href="#" style="color: white;">Help</a>
         </div>
 
-        <div class="col install">
+        <!-- <div class="col install">
           <h4>Install App</h4>
           <p>From App Store or Google Play</p>
-
           <div class="row">
-            <img src="https://i.postimg.cc/Y2s5mLdR/app.jpg" alt="">
-            <img src="https://i.postimg.cc/7YvyWTS6/play.jpg" alt="">
-          </div>
-          <p>Secured Payment Gateways</p>
-          <img src="https://i.postimg.cc/kgfzqVRW/pay.png" alt="">
-        </div>
+            <img src="https://i.postimg.cc/Y2s5mLdR/app.jpg" alt="App Store Badge" width="200" height="70"
+              loading="lazy">
+            <img src="https://i.postimg.cc/7YvyWTS6/play.jpg" alt="Google Play Badge" width="200" height="70"
+              loading="lazy">
+          </div> -->
+        <p style="color: white;">Secured Payment Gateways</p>
+        <!-- <img src="https://i.postimg.cc/kgfzqVRW/pay.png" alt="Payment Gateways Icons" width="300" height="70"
+          loading="lazy"> -->
+      </div>
       </div>
 
       <div class="coypright">
-        <p>© 2023 All rights reserved! made by Tunrayo</p>
+        <p style="color: white;">© 2023 All rights reserved! made by Tunrayo</p>
       </div>
-
     </footer>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 
     <script src="script.js"></script>
   </body>
