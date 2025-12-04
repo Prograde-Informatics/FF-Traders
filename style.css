@@ -505,6 +505,62 @@ a {
   border: 3px solid #0A98E0;
 }
 
+/* ...existing code... */
+
+/* Single-line horizontal services row */
+.pro-row {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  overflow-x: auto;
+  padding: 16px 8px;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* ensure each card stays fixed width and doesn't wrap */
+.pro-row .pro {
+  flex: 0 0 250px;
+  /* adjust width to match your images (300px used) */
+  max-width: 300px;
+
+  box-sizing: border-box;
+}
+
+/* make images fill card width responsively */
+.pro-row .pro img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* small visual scrollbar styling */
+.pro-row::-webkit-scrollbar {
+  color: #0A98E0;
+  height: 8px;
+}
+
+.pro-row::-webkit-scrollbar-thumb {
+  background: rgba(10, 152, 224, 0.35);
+  border-radius: 8px;
+}
+
+/* On very wide screens, allow cards to expand a bit */
+@media (min-width: 1200px) {
+  .pro-row .pro {
+    flex: 0 0 22%;
+    max-width: 22%;
+  }
+}
+
+/* Optional: hide excess text wrapping inside card descriptions */
+.pro-row .des {
+  white-space: normal;
+}
+
+/* ...existing code... */
+
 #banner {
   display: flex;
   flex-direction: column;
