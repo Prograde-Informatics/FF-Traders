@@ -21,9 +21,32 @@
       rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900;&display=swap">
+    <style>
+      .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 10px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
 
 
   </head>
+  <a href="https://wa.me/23456876199" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
   <body>
     <section id="header">
@@ -35,14 +58,14 @@
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="shop all.html">Shop All</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li class="dropdown">
-            <a href="contact.html">Our Services</a>
+          <li class="dropdown" id="services-link">
+            <a href="services.html" aria-haspopup="true" aria-expanded="false">Our Services</a>
             <ul class=" dropdown-menu">
               <li><a href="it-solutions.html" class="active">IT Solutions</a></li>
-              <li><a href="#">Real Estate</a></li>
-              <li><a href="#">Import & Export</a></li>
-              <li><a href="#">E-Commerce Products</a></li>
-              <li><a href="#">Physiotherapy Equipment</a></li>
+              <li><a href="real-estate.html">Real Estate</a></li>
+              <li><a href="import-export.html">Import & Export</a></li>
+              <li><a href="ecommerce-products.html">E-Commerce Products</a></li>
+              <li><a href="physiotherapy-equipment.html">Physiotherapy Equipment</a></li>
             </ul>
           </li>
           <li><a href="contact.html">Contact Us</a></li>
@@ -67,38 +90,101 @@
       </div>
     </section>
 
-    <section class="who">
-      <h2 style="color:#0A98E0;">IT Solutions</h2>
-      <p>We provide web development, software development, IT support, ecommerce setup and digital tools.</p>
+    <!-- Page Hero -->
+    <section class="services-hero" style="background-image: url(images/freepik__talk__11449.png);">
+      <h1>IT Solutions</h1>
+      <p>Custom web development, software solutions, and IT support to drive your business forward.</p>
     </section>
 
-    <section id="product1">
-      <h3>Our IT Services Include</h3>
+    <!-- Services Section -->
+    <section id="product1" class="section-p1">
+      <div class="pro-container">
 
-      <ul style="line-height: 2;">
-        <li>Website & Web App Development</li>
-        <li>Software Solutions</li>
-        <li>IT Support & Maintenance</li>
-        <li>E-commerce Store Setup</li>
-        <li>Digital Tools & Automation</li>
-      </ul>
-    </section>
+        <!-- Service 1: Web Development -->
+        <div class="pro">
+          <img src="images/html-css-collage-concept-with-person.png" alt="Web Development Service">
+          <div class="des">
+            <span style="color: white;">Development</span>
+            <h5 style="color: white;">Website & Web App Development</h5>
+            <p style="color: #ccc; font-size: 14px; margin-top: 8px;">Crafting responsive, high-performance websites and
+              custom web applications.</p>
+          </div>
+          <a href="contact.html" class="normal"
+            style="text-decoration: none; display: block; text-align: center; margin-top: 15px; padding: 12px; background: #0A98E0; color: white; border-radius: 6px;">Get
+            a Quote</a>
+        </div>
 
+        <!-- Service 2: Software Solutions -->
+        <div class="pro">
+          <img src="images/software-dev.jpg" alt="Software Solutions Service">
+          <div class="des">
+            <span style="color: white;">Custom Software</span>
+            <h5 style="color: white;">Software Solutions</h5>
+            <p style="color: #ccc; font-size: 14px; margin-top: 8px;">Developing scalable and efficient custom software
+              to streamline your operations.</p>
+          </div>
+          <a href="contact.html" class="normal"
+            style="text-decoration: none; display: block; text-align: center; margin-top: 15px; padding: 12px; background: #0A98E0; color: white; border-radius: 6px;">Get
+            a Quote</a>
+        </div>
 
-    <section class="who">
-      <h2 style="color:#0A98E0;">Real Estate Services</h2>
-      <p>Premium consultancy for buying, selling, rental, and investment opportunities.</p>
-    </section>
+        <!-- Service 3: IT Support -->
+        <div class="pro">
+          <img src="images/it-support.jpg" alt="IT Support Service">
+          <div class="des">
+            <span style="color: white;">Support</span>
+            <h5 style="color: white;">IT Support & Maintenance</h5>
+            <p style="color: #ccc; font-size: 14px; margin-top: 8px;">Reliable IT support and proactive maintenance to
+              ensure your systems run smoothly.</p>
+          </div>
+          <a href="contact.html" class="normal"
+            style="text-decoration: none; display: block; text-align: center; margin-top: 15px; padding: 12px; background: #0A98E0; color: white; border-radius: 6px;">Get
+            a Quote</a>
+        </div>
 
-    <section id="product1">
-      <h3>What We Offer</h3>
+        <!-- Service 4: E-commerce Setup -->
+        <div class="pro">
+          <img src="images/ecommerce-setup.jpg" alt="E-commerce Setup Service">
+          <div class="des">
+            <span style="color: white;">Online Stores</span>
+            <h5 style="color: white;">E-commerce Store Setup</h5>
+            <p style="color: #ccc; font-size: 14px; margin-top: 8px;">Building powerful online stores with seamless
+              payment integration and management.</p>
+          </div>
+          <a href="contact.html" class="normal"
+            style="text-decoration: none; display: block; text-align: center; margin-top: 15px; padding: 12px; background: #0A98E0; color: white; border-radius: 6px;">Get
+            a Quote</a>
+        </div>
 
-      <ul style="line-height: 2;">
-        <li>Property Buying & Selling</li>
-        <li>Commercial & Residential Deals</li>
-        <li>Investment Planning</li>
-        <li>Property Management</li>
-      </ul>
+        <!-- Service 5: Digital Tools -->
+        <div class="pro">
+          <img src="images/automation.jpg" alt="Digital Tools & Automation Service">
+          <div class="des">
+            <span style="color: white;">Automation</span>
+            <h5 style="color: white;">Digital Tools & Automation</h5>
+            <p style="color: #ccc; font-size: 14px; margin-top: 8px;">Implementing smart digital tools and automation
+              workflows to save time and effort.</p>
+          </div>
+          <a href="contact.html" class="normal"
+            style="text-decoration: none; display: block; text-align: center; margin-top: 15px; padding: 12px; background: #0A98E0; color: white; border-radius: 6px;">Get
+            a Quote</a>
+        </div>
+
+        <!-- Service 6: Mobile App Development -->
+        <div class="pro">
+          <img src="images/mobile-app-dev.jpg" alt="Mobile App Development Service">
+          <div class="des">
+            <span style="color: white;">Mobile Apps</span>
+            <h5 style="color: white;">Mobile App Development</h5>
+            <p style="color: #ccc; font-size: 14px; margin-top: 8px;">Creating intuitive and high-performance mobile
+              applications for iOS and Android.</p>
+          </div>
+          <a href="contact.html" class="normal"
+            style="text-decoration: none; display: block; text-align: center; margin-top: 15px; padding: 12px; background: #0A98E0; color: white; border-radius: 6px;">Get
+            a Quote</a>
+        </div>
+
+      </div>
     </section>
 
     <!-- Footer -->

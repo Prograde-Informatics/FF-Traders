@@ -9,9 +9,32 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon.png">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <style>
+      .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 10px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
   </head>
 
   <body>
+    <a href="https://wa.me/23456876199" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
 
     <section id="header">
       <a href="index.html">
@@ -23,13 +46,13 @@
           <li><a href=" shop all.html">Shop All</a></li>
           <li><a href="about.html" class="active">About Us</a></li>
           <li class="dropdown">
-            <a href="#">Our Services</a>
-            <ul class=" dropdown-menu">
-              <li><a href="#">IT Solutions</a></li>
-              <li><a href="#">Real Estate</a></li>
-              <li><a href="#">Import & Export</a></li>
-              <li><a href="#">E-Commerce Products</a></li>
-              <li><a href="#">Physiotherapy Equipment</a></li>
+            <a href="services.html" id="services-link" aria-haspopup="true" aria-expanded="false">Our Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="it-solutions.html">IT Solutions</a></li>
+              <li><a href="real-estate.html">Real Estate</a></li>
+              <li><a href="import-export.html">Import & Export</a></li>
+              <li><a href="ecommerce-products.html">E-Commerce Products</a></li>
+              <li><a href="physiotherapy-equipment.html">Physiotherapy Equipment</a></li>
             </ul>
           </li>
           <li><a href="contact.html">Contact Us</a></li>

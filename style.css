@@ -5,6 +5,8 @@ html {
 }
 
 
+
+
 * {
   margin: 0;
   padding: 0;
@@ -190,7 +192,7 @@ body {
 .dropdown-menu li a {
   display: block;
   padding: 12px 24px;
-  color: #222;
+  color: white;
   font-size: 14px;
   font-weight: 500;
   transition: all 0.2s ease;
@@ -198,8 +200,8 @@ body {
 }
 
 .dropdown-menu li a:hover {
-  background-color: black;
-  color: black;
+  background-color: #080808;
+  color: #0A98E0;
   border-left-color: #0A98E0;
   padding-left: 28px;
 }
@@ -1116,6 +1118,57 @@ footer .copyright {
     cursor: pointer;
   }
 
+  /* Mobile Dropdown Styles */
+  #navbar .dropdown .dropdown-menu {
+    position: static;
+    /* Change from absolute to static for mobile nav */
+    background: none;
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    padding-left: 15px;
+    /* Indent dropdown items */
+    max-height: 0;
+    /* Hidden by default */
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: max-height 0.4s ease-in-out;
+    /* Smooth slide effect */
+    display: block;
+    /* Override flex */
+  }
+
+  #navbar .dropdown.active .dropdown-menu {
+    max-height: 300px;
+    /* Set a max-height to reveal the menu */
+    padding-top: 10px;
+  }
+
+  #navbar .dropdown .dropdown-menu li {
+    padding: 0;
+    margin-bottom: 15px;
+  }
+
+  #navbar .dropdown .dropdown-menu li a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #ccc;
+    /* Lighter color for sub-items */
+  }
+
+  #navbar .dropdown .dropdown-menu li a:hover,
+  #navbar .dropdown .dropdown-menu li a.active {
+    color: #0A98E0;
+    /* Highlight on hover/active */
+  }
+
+  #navbar .dropdown .dropdown-menu::before {
+    display: none;
+    /* Hide the desktop arrow on mobile */
+  }
+
 
   #mobile {
     display: none;
@@ -1213,7 +1266,7 @@ footer .copyright {
 }
 
 .dropdown-scroll {
-  max-height: 200px;
+  max-height: 300px;
   /* max height before scrolling */
   overflow-y: auto;
   background-color: #E3E6F3;

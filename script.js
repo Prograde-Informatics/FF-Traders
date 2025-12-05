@@ -14,19 +14,6 @@ if (closeBtn) {
   });
 }
 
-// Select all dropdowns in mobile navbar
-const dropdowns = document.querySelectorAll("#navbar .dropdown");
-
-dropdowns.forEach(dropdown => {
-  const a = dropdown.querySelector("a");
-  if (a) {
-    a.addEventListener("click", function (e) {
-      e.preventDefault();
-      dropdown.classList.toggle("active");
-    });
-  }
-});
-
 // Simple cart stored in localStorage
 const CART_KEY = 'fftraders_cart';
 
@@ -197,9 +184,12 @@ function showCustomAlert(title, message, icon = '✓', callback = null) {
   modal.classList.add('show');
 
   const closeHandler = () => {
-    modal.classList.remove('show');
-    closeBtn.removeEventListener('click', closeHandler);
-    if (callback) callback();
+    try {
+      if (callback) callback();
+    } finally {
+      modal.classList.remove('show');
+      closeBtn.removeEventListener('click', closeHandler);
+    }
   };
 
   closeBtn.addEventListener('click', closeHandler);
@@ -241,7 +231,36 @@ document.addEventListener('click', function (e) {
 /* Initialize on page load */
 document.addEventListener('DOMContentLoaded', () => {
   updateCartCount();
+
+  // Logic to make "Our Services" active if on a service page
+  const servicesLink = document.getElementById('services-link');
+  if (servicesLink) {
+    const servicePages = [
+      'it-solutions.html',
+      'real-estate.html',
+      'import-export.html',
+      'ecommerce-products.html',
+      'physiotherapy-equipment.html'
+    ];
+    const currentPage = window.location.pathname.split('/').pop();
+    if (servicePages.includes(currentPage)) {
+      servicesLink.classList.add('active');
+    }
+  }
+
   if (document.getElementById('cart-items')) renderCartPage();
+
+  // Add logic for the new "Clear Cart" button
+  const clearCartBtn = document.getElementById('clear-cart-btn');
+  if (clearCartBtn) {
+    clearCartBtn.addEventListener('click', () => {
+      if (confirm('Are you sure you want to clear your cart?')) {
+        localStorage.removeItem(CART_KEY); // This is the key line that clears the cart data
+        renderCartPage(); // Re-render the cart page to show it's empty
+        updateCartCount(); // Update the cart icon count
+      }
+    });
+  }
 });
 
 /* Checkout Modal Logic */
@@ -259,8 +278,11 @@ if (checkoutBtn) {
     }
     if (checkoutModal) checkoutModal.style.display = 'block';
     const subtotal = cart.reduce((s, i) => s + (parseFloat(i.price) * (i.qty || 1)), 0);
-    const totalEl = document.getElementById('checkout-total');
-    if (totalEl) totalEl.textContent = `$${(subtotal + 10).toFixed(2)}`;
+    const checkoutTotalEl = document.getElementById('checkout-total');
+    if (checkoutTotalEl) {
+      const shipping = 10.00;
+      checkoutTotalEl.textContent = `$${(subtotal + shipping).toFixed(2)}`;
+    }
   });
 }
 
@@ -371,3 +393,23 @@ if (contactForm) {
     if (formSuccess) formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 }
+
+// Select all dropdowns in mobile navbar (this was duplicated, one instance removed)
+const dropdowns = document.querySelectorAll("#navbar .dropdown");
+
+dropdowns.forEach(dropdown => {
+  const a = dropdown.querySelector("a");
+  if (!a) return;
+
+  a.addEventListener("click", function (e) {
+    // treat as mobile when viewport is narrow or mobile nav is active
+    const isMobile = window.innerWidth <= 900 || nav.classList.contains('active');
+
+    if (isMobile) {
+      e.preventDefault();
+      dropdown.classList.toggle("active");
+      a.setAttribute('aria-expanded', dropdown.classList.contains('active') ? 'true' : 'false');
+    } else {
+    }
+  });
+});

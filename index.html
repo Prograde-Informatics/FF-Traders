@@ -22,10 +22,33 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900;&display=swap">
 
+    <style>
+      .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 10px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
 
   </head>
 
   <body>
+    <a href="https://wa.me/23456876199" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
     <section id="header">
       <a href="index.html">
         <img src="images/FF TRADERS4.png" alt="FF Traders Logo" width="80px" height="75px" loading="lazy">
@@ -35,14 +58,17 @@
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="shop all.html">Shop All</a></li>
           <li><a href="about.html">About Us</a></li>
+
           <li class="dropdown">
-            <a href="contact.html">Our Services</a>
-            <ul class=" dropdown-menu">
+            <a href="services.html" id="services-link" aria-haspopup="true" aria-expanded="false">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="our-services.html">Our Services</a></li>
               <li><a href="it-solutions.html">IT Solutions</a></li>
-              <li><a href="#">Real Estate</a></li>
-              <li><a href="#">Import & Export</a></li>
-              <li><a href="#">E-Commerce Products</a></li>
-              <li><a href="#">Physiotherapy Equipment</a></li>
+              <li><a href="real-estate.html">Real Estate</a></li>
+              <li><a href="import-export.html">Import & Export</a></li>
+              <li><a href="ecommerce-products.html">E-Commerce Products</a></li>
+              <li><a href="physiotherapy-equipment.html">Physiotherapy Equipment</a></li>
+
             </ul>
           </li>
           <li><a href="contact.html">Contact Us</a></li>
@@ -239,7 +265,10 @@
             </div>
             <h4>$78</h4>
           </div>
-          <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+          <button class="add-to-cart" data-id="n1" data-name="Carton Astronaut T-Shirt" data-price="78"
+            data-image="https://i.postimg.cc/hG1hqqK6/n1.jpg">
+            <i class="fal fa-shopping-cart cart"></i> Add to Cart
+          </button>
         </div>
 
         <div class="pro2">
@@ -254,7 +283,10 @@
             </div>
             <h4>$78</h4>
           </div>
-          <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+          <button class="add-to-cart" data-id="n2" data-name="Leaf Printed T-Shirt" data-price="78"
+            data-image="https://i.postimg.cc/BZkSkvxt/n2.jpg">
+            <i class="fal fa-shopping-cart cart"></i> Add to Cart
+          </button>
         </div>
 
         <div class="pro2">
@@ -269,7 +301,10 @@
             </div>
             <h4>$78</h4>
           </div>
-          <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+          <button class="add-to-cart" data-id="n3" data-name="Rose Multicolor T-Shirt" data-price="78"
+            data-image="https://i.postimg.cc/KYjcC3sk/n3.jpg">
+            <i class="fal fa-shopping-cart cart"></i> Add to Cart
+          </button>
         </div>
       </div>
 
@@ -286,7 +321,10 @@
             </div>
             <h4>$78</h4>
           </div>
-          <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+          <button class="add-to-cart" data-id="n4" data-name="Pink Flower T-Shirt" data-price="78"
+            data-image="https://i.postimg.cc/vHvQBtJx/n4.jpg">
+            <i class="fal fa-shopping-cart cart"></i> Add to Cart
+          </button>
         </div>
 
         <div class="pro2">
@@ -301,7 +339,10 @@
             </div>
             <h4>$78</h4>
           </div>
-          <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+          <button class="add-to-cart" data-id="n5" data-name="Purple Flowering T-Shirt" data-price="78"
+            data-image="https://i.postimg.cc/908J8S4q/n5.jpg">
+            <i class="fal fa-shopping-cart cart"></i> Add to Cart
+          </button>
         </div>
       </div>
     </section>
