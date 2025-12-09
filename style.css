@@ -1315,193 +1315,187 @@ footer .copyright {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .service-card {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
+
+
+  /* toast notification for add-to-cart */
+  .toast {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    min-width: 220px;
+    max-width: 320px;
+    background: rgba(10, 153, 224, 0.98);
+    /* blue accent */
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 99999;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
-}
+
+  /* visible state */
+  .toast.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* success style */
+  .toast.success {
+    background: linear-gradient(90deg, #0A98E0, #0787c7);
+  }
+
+  /* optional small icon */
+  .toast .icon {
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.12);
+    font-size: 14px;
+  }
+
+  /* close button */
+  .toast .close {
+    margin-left: auto;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 14px;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  /* Add-to-cart button */
+  .add-to-cart {
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    border: 2px solid #0A98E0;
+    color: #0A98E0;
+    padding: 10px 14px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.18s ease, color 0.18s ease, transform 0.12s ease, box-shadow 0.18s ease;
+  }
+
+  /* icon size */
+  .add-to-cart .cart {
+    font-size: 16px;
+  }
+
+  /* hover */
+  .add-to-cart:hover {
+    background: #0A98E0;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  /* pressed / active */
+  .add-to-cart:active {
+    transform: translateY(0);
+  }
+
+  /* temporary "added" state (applied by JS) */
+  .add-to-cart.added {
+    background: linear-gradient(90deg, #0A98E0, #0787c7);
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(10, 152, 224, 0.20);
+    transform: translateY(-2px) scale(0.995);
+  }
+
+  /* check icon spacing when showing "Added" */
+  .add-to-cart i.fal.fa-check {
+    margin-right: 6px;
+    font-size: 14px;
+  }
 
 
-/* toast notification for add-to-cart */
-.toast {
-  position: fixed;
-  top: 90px;
-  right: 20px;
-  min-width: 220px;
-  max-width: 320px;
-  background: rgba(10, 153, 224, 0.98);
-  /* blue accent */
-  color: #fff;
-  padding: 12px 16px;
-  border-radius: 10px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
-  transform: translateY(-8px);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s ease, transform 0.25s ease;
-  z-index: 99999;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+  /* Custom Primary Button for "View All" links */
+  .btn-primary {
+    background-color: #0A98E0;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
 
-/* visible state */
-.toast.show {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
+  .btn-primary:hover {
+    background-color: #087ab8;
+    /* Darker blue on hover */
+    transform: translateY(-2px);
+    /* Slight lift effect */
+  }
 
-/* success style */
-.toast.success {
-  background: linear-gradient(90deg, #0A98E0, #0787c7);
-}
-
-/* optional small icon */
-.toast .icon {
-  width: 28px;
-  height: 28px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.12);
-  font-size: 14px;
-}
-
-/* close button */
-.toast .close {
-  margin-left: auto;
-  cursor: pointer;
-  opacity: 0.9;
-  font-size: 14px;
-  background: transparent;
-  border: none;
-  color: rgba(255, 255, 255, 0.95);
-}
-
-/* Add-to-cart button */
-.add-to-cart {
-  appearance: none;
-  -webkit-appearance: none;
-  background: transparent;
-  border: 2px solid #0A98E0;
-  color: #0A98E0;
-  padding: 10px 14px;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  font-weight: 700;
-  transition: background-color 0.18s ease, color 0.18s ease, transform 0.12s ease, box-shadow 0.18s ease;
-}
-
-/* icon size */
-.add-to-cart .cart {
-  font-size: 16px;
-}
-
-/* hover */
-.add-to-cart:hover {
-  background: #0A98E0;
-  color: #fff;
-  transform: translateY(-2px);
-}
-
-/* pressed / active */
-.add-to-cart:active {
-  transform: translateY(0);
-}
-
-/* temporary "added" state (applied by JS) */
-.add-to-cart.added {
-  background: linear-gradient(90deg, #0A98E0, #0787c7);
-  color: #fff;
-  box-shadow: 0 10px 30px rgba(10, 152, 224, 0.20);
-  transform: translateY(-2px) scale(0.995);
-}
-
-/* check icon spacing when showing "Added" */
-.add-to-cart i.fal.fa-check {
-  margin-right: 6px;
-  font-size: 14px;
-}
-
-
-/* Custom Primary Button for "View All" links */
-.btn-primary {
-  background-color: #0A98E0;
-  color: white;
-  border: none;
-  padding: 15px 30px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.btn-primary:hover {
-  background-color: #087ab8;
-  /* Darker blue on hover */
-  transform: translateY(-2px);
-  /* Slight lift effect */
-}
-
-/* Single Product Details */
-#prodetails {
-  display: flex;
-  margin-top: 20px;
-}
-
-#prodetails .single-pro-image {
-  width: 40%;
-  margin-right: 50px;
-}
-
-#prodetails .single-pro-details {
-  width: 50%;
-  padding-top: 30px;
-}
-
-#prodetails .single-pro-details h4 {
-  padding: 40px 0 20px 0;
-}
-
-#prodetails .single-pro-details h2 {
-  font-size: 26px;
-}
-
-#prodetails .single-pro-details input {
-  width: 50px;
-  height: 47px;
-  padding-left: 10px;
-  font-size: 16px;
-  margin-right: 10px;
-}
-
-#prodetails .single-pro-details button {
-  background: #0A98E0;
-  color: white;
-}
-
-#prodetails .single-pro-details span {
-  line-height: 25px;
-}
-
-@media (max-width: 477px) {
+  /* Single Product Details */
   #prodetails {
-    flex-direction: column;
+    display: flex;
+    margin-top: 20px;
   }
 
   #prodetails .single-pro-image {
-    width: 100%;
-    margin-right: 0px;
+    width: 40%;
+    margin-right: 50px;
   }
 
   #prodetails .single-pro-details {
-    width: 100%;
+    width: 50%;
+    padding-top: 30px;
   }
-}
+
+  #prodetails .single-pro-details h4 {
+    padding: 40px 0 20px 0;
+  }
+
+  #prodetails .single-pro-details h2 {
+    font-size: 26px;
+  }
+
+  #prodetails .single-pro-details input {
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+
+  #prodetails .single-pro-details button {
+    background: #0A98E0;
+    color: white;
+  }
+
+  #prodetails .single-pro-details span {
+    line-height: 25px;
+  }
+
+  @media (max-width: 477px) {
+    #prodetails {
+      flex-direction: column;
+    }
+
+    #prodetails .single-pro-image {
+      width: 100%;
+      margin-right: 0px;
+    }
+
+    #prodetails .single-pro-details {
+      width: 100%;
+    }
+  }
