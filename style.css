@@ -455,9 +455,8 @@ a {
 
 
 #product1 .pro:hover {
-  box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.06);
-  width: 33%;
-  height: 420px;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.08);
+  transform: scale(1.05);
 }
 
 #product1 .pro img {
@@ -861,32 +860,12 @@ footer .copyright {
 
 @media (max-width: 920px) {
 
+  body #lg-bag {
+    display: none
+  }
+
   .section-p1 {
     padding: 40px 40px
-  }
-
-  #navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: fixed;
-    top: 0;
-    right: -300px;
-    height: 100vh;
-    width: 300px;
-    background-color: #E3E6F3;
-    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
-    padding: 80px 0 0 10px;
-    transition: 0.3s
-  }
-
-  #navbar.active {
-    right: 0;
-  }
-
-  #navbar li {
-    margin-bottom: 25px
   }
 
   #mobile {
@@ -896,21 +875,8 @@ footer .copyright {
 
   #mobile i {
     font-size: 32px;
-    color: #1a1a1a;
+    color: white;
     padding-left: 20px
-  }
-
-  body #lg-bag {
-    display: none
-  }
-
-  #close {
-    display: initial;
-    position: absolute;
-    top: -280px;
-    left: 20px;
-    color: #222;
-    font-size: 32px;
   }
 
   #lg-bag {
@@ -929,22 +895,9 @@ footer .copyright {
     padding: 20px 40px;
     /* reduce padding */
     background-position: center;
-    background-image: none;
     background-image: url(images/freepik__talk__11449.png);
-    /* center the image and show top portion */
     background-size: cover;
-    /* ensure it covers the whole section */
   }
-
-  /* Already inside your @media (max-width: 477px) */
-  /* #hero {
-    height: 60vh;
-    /* smaller height for mobile 
-    padding: 10px 20px;
-    background-position: center 30%;
-    /* adjust vertical focus 
-    background-size: cover;
-  } */
 
 
   #feature {
@@ -1568,11 +1521,15 @@ footer .copyright {
 
 @media (max-width: 477px) {
   #prodetails {
-    display: flex;
     flex-direction: column;
   }
 
   #prodetails .single-pro-image {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  #prodetails .single-pro-details {
     width: 100%;
   }
 }
