@@ -857,89 +857,6 @@ footer .copyright {
 
 /*----------------------Media Query ----------*/
 
-
-@media (max-width: 920px) {
-
-  body #lg-bag {
-    display: none
-  }
-
-  .section-p1 {
-    padding: 40px 40px
-  }
-
-  #mobile {
-    display: flex;
-    align-items: center
-  }
-
-  #mobile i {
-    font-size: 32px;
-    color: white;
-    padding-left: 20px
-  }
-
-  #lg-bag {
-    display: none
-  }
-
-  .quantity {
-    top: 15px;
-    left: 83%;
-  }
-
-  /* Already inside your @media (max-width: 920px) */
-  #hero {
-    height: 70vh;
-    /* smaller height on tablets */
-    padding: 20px 40px;
-    /* reduce padding */
-    background-position: center;
-    background-image: url(images/freepik__talk__11449.png);
-    background-size: cover;
-  }
-
-
-  #feature {
-    justify-content: center;
-
-  }
-
-  #feature .fe-box {
-    margin: 15px 15px
-  }
-
-  #product1 .pro-container {
-    justify-content: center
-  }
-
-  #product1 .pro {
-    margin: 15px;
-  }
-
-  #banner {
-    height: 25vh
-  }
-
-  #sm-banner .banner-box {
-    min-width: 100%;
-    height: 30vh;
-  }
-
-  #banner3 {
-    padding: 0 40px
-  }
-
-  #banner3 .banner-box {
-    width: 28%
-  }
-
-  #newsletter .form {
-    width: 70%
-  }
-
-}
-
 @media (max-width: 477px) {
   .section-p1 {
     padding: 20px
@@ -986,7 +903,8 @@ footer .copyright {
   }
 
   #product1 .pro {
-    width: 100%
+    width: 100%;
+    margin: 15px 0;
   }
 
   #banner {
@@ -1042,6 +960,67 @@ footer .copyright {
 
 /* Hamburger for mobile */
 @media (max-width: 920px) {
+  .section-p1 {
+    padding: 40px 40px
+  }
+
+  #mobile {
+    /* This seems to be a legacy element, the .menu-icon is used instead. Hiding it. */
+    display: none;
+  }
+
+  #lg-bag {
+    display: none
+  }
+
+  .quantity {
+    top: 15px;
+    left: 83%;
+  }
+
+  #hero {
+    height: 70vh;
+    /* smaller height on tablets */
+    padding: 20px 40px;
+    /* reduce padding */
+    background-position: center;
+    background-image: url(images/freepik__talk__11449.png);
+    background-size: cover;
+  }
+
+  #feature {
+    justify-content: center;
+  }
+
+  #feature .fe-box {
+    margin: 15px 15px
+  }
+
+  #product1 .pro-container {
+    justify-content: center
+  }
+
+  #product1 .pro {
+    margin: 15px;
+  }
+
+  #banner {
+    height: 25vh
+  }
+
+  #sm-banner .banner-box {
+    min-width: 100%;
+    height: 30vh;
+  }
+
+  #banner3 {
+    padding: 0 40px
+  }
+
+  #banner3 .banner-box {
+    width: 28%
+  }
+
   .menu-icon {
     display: flex;
   }
@@ -1054,6 +1033,7 @@ footer .copyright {
     width: 300px;
     background-color: black;
     flex-direction: column;
+    align-items: flex-start;
     padding-top: 80px;
     transition: 0.3s;
     z-index: 999;
@@ -1064,6 +1044,7 @@ footer .copyright {
   }
 
   #navbar li {
+    padding: 0 20px;
     margin-bottom: 25px;
   }
 
@@ -1073,6 +1054,7 @@ footer .copyright {
     top: 20px;
     right: 20px;
     font-size: 32px;
+    color: white;
     cursor: pointer;
   }
 
@@ -1127,24 +1109,8 @@ footer .copyright {
     /* Hide the desktop arrow on mobile */
   }
 
-
-  #mobile {
-    display: none;
-    /* already hidden on desktop */
-    position: absolute;
-    /* position it relative to header */
-    top: 20px;
-    /* distance from top of header */
-    right: 30px;
-    /* distance from right */
-    z-index: 999;
-    /* above other elements */
-    cursor: pointer;
-  }
-
-  #mobile i {
-    font-size: 32px;
-    color: #1a1a1a;
+  #newsletter .form {
+    width: 70%
   }
 }
 
@@ -1234,36 +1200,6 @@ footer .copyright {
   bottom: 20px;
   right: 10px;
 
-}
-
-.dropdown-scroll {
-  max-height: 300px;
-  /* max height before scrolling */
-  overflow-y: auto;
-  background-color: #E3E6F3;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 200px;
-  display: none;
-  z-index: 1000;
-}
-
-#navbar li:hover .dropdown-scroll {
-  display: block;
-}
-
-.dropdown-scroll li {
-  padding: 10px;
-}
-
-.dropdown-scroll::-webkit-scrollbar {
-  width: 6px;
-}
-
-.dropdown-scroll::-webkit-scrollbar-thumb {
-  background-color: #0A98E0;
-  border-radius: 10px;
 }
 
 /* Standard Page Hero Section */
