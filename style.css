@@ -940,26 +940,13 @@ footer .copyright {
   }
 }
 
-/* Your full CSS here, keep everything unchanged */
-
-/* Add this at the end for hamburger menu responsiveness */
-.menu-icon {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 6px;
-}
-
-.menu-icon span {
-  width: 30px;
-  height: 3px;
-  background: #0A98E0;
-  border-radius: 3px;
-  transition: 0.3s;
-}
-
 /* Hamburger for mobile */
 @media (max-width: 920px) {
+  #header {
+    padding: 20px 40px;
+    /* Add more space on tablet/mobile */
+  }
+
   .section-p1 {
     padding: 40px 40px
   }
@@ -1023,6 +1010,17 @@ footer .copyright {
 
   .menu-icon {
     display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+  }
+
+  .menu-icon span {
+    width: 30px;
+    height: 3px;
+    background: #0A98E0;
+    border-radius: 3px;
+    transition: 0.3s;
   }
 
   #navbar {
@@ -1086,6 +1084,30 @@ footer .copyright {
     padding-top: 10px;
   }
 
+  /* Add a visual indicator for mobile dropdowns */
+  #navbar .dropdown>a.no-link::after {
+    content: '\f078';
+    /* Font Awesome chevron-down */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-left: auto;
+    padding-left: 10px;
+    font-size: 12px;
+    color: #ccc;
+    transition: transform 0.3s ease;
+  }
+
+  #navbar .dropdown>a.no-link {
+    display: flex;
+    /* To align text and icon */
+    align-items: center;
+  }
+
+  #navbar .dropdown.active>a.no-link::after {
+    transform: rotate(180deg);
+    /* Flip icon when open */
+  }
+
   #navbar .dropdown .dropdown-menu li {
     padding: 0;
     margin-bottom: 15px;
@@ -1111,6 +1133,19 @@ footer .copyright {
 
   #newsletter .form {
     width: 70%
+  }
+
+  .pro2 {
+    width: 45%;
+    /* Two columns on tablets */
+    margin: 15px;
+  }
+}
+
+/* Hide hamburger on desktop */
+@media (min-width: 921px) {
+  .menu-icon {
+    display: none;
   }
 }
 
@@ -1283,6 +1318,7 @@ footer .copyright {
   .service-card {
     flex-direction: column;
     text-align: center;
+    gap: 20px;
   }
 }
 
