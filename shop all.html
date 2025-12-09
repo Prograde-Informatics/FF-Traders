@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All - FF TRADERS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <style>
+      .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 10px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="https://api.whatsapp.com/send/?phone=923152267180&text&type=phone_number&app_absent=0"
+      class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <section id="header">
+      <a href="index.html">
+        <img src="images/FF TRADERS4.png" alt="FF Traders Logo" width="80px" height="75px" loading="lazy">
+      </a>
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop all.html" class="active">Shop All</a></li>
+          <li><a href="about.html">About Us</a></li>
+
+          <li class="dropdown">
+            <a href="javascript:void(0);" id="services-link" class="no-link" aria-haspopup="true"
+              aria-expanded="false">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="our-services.html">Our Services</a></li>
+              <li><a href="it-solutions.html">IT Solutions</a></li>
+              <li><a href="real-estate.html">Real Estate</a></li>
+              <li><a href="import-export.html">Import & Export</a></li>
+              <li><a href="ecommerce-products.html">E-Commerce Products</a></li>
+              <li><a href="physiotherapy-equipment.html">Physiotherapy Equipment</a></li>
+
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li class="cart-item">
+            <a href="cart.html" class="cart-link" aria-label="View cart">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </a>
+          </li>
+          <li><a href="#" id="close"><i class="far fa-times"></i></a></li>
+        </ul>
+        <div class="menu-icon" id="bar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="mobile">
+        <a href="cart.html"><i class="fal fa-shopping-bag"></i>
+          <span class="quantity">0</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Hero (Shop Banner) -->
+    <section class="page-hero">
+      <h2>Shop All Products</h2>
+      <p>Explore our latest collections & best-selling items</p>
+    </section>
+
+    <!-- Products Section -->
+    <section id="product1" class="section-p1">
+      <h2>All Products</h2>
+      <p>Find everything you need in one place</p>
+
+      <div class="pro-container">
+
+        <!-- Product 1 -->
+        <div class="pro" onclick="window.location.href='product1.html';">
+          <img src="images/ecommerce1.jpg" alt="Smart LED Lights" width="226" height="226" loading="lazy">
+          <div class="des">
+            <span style="color: white;">Electronics</span>
+            <h5 style="color: white;">Smart LED Lights</h5>
+            <h4>$45</h4>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="pro" onclick="window.location.href='product2.html';">
+          <img src="images/ecommerce2.jpg" alt="Hair Removal IPL Device" width="226" height="226" loading="lazy">
+          <div class="des">
+            <span style="color: white;">Beauty</span>
+            <h5 style="color: white;">Hair Removal IPL Device</h5>
+            <h4>$120</h4>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="pro" onclick="window.location.href='product3.html';">
+          <img src="images/ecommerce3.jpg" alt="Portable Massage Gun" width="226" height="226" loading="lazy">
+          <div class="des">
+            <span style="color: white;">Fitness</span>
+            <h5 style="color: white;">Portable Massage Gun</h5>
+            <h4>$89</h4>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="pro" onclick="window.location.href='product4.html';">
+          <img src="images/ecommerce4.jpg" alt="TENS Therapy Machine" width="226" height="226" loading="lazy">
+          <div class="des">
+            <span style="color: white;">Physiotherapy</span>
+            <h5 style="color: white;">TENS Therapy Machine</h5>
+            <h4>$65</h4>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="pro" onclick="window.location.href='product5.html';">
+          <img src="images/patient-doing-exercise-using-sports-equipment-with-therapist.png"
+            alt="Smart Bluetooth Speaker" width="226" height="226" loading="lazy">
+          <div class="des">
+            <span style="color: white;">Gadgets</span>
+            <h5 style="color: white;">Smart Bluetooth Speaker</h5>
+            <h4>$55</h4>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="pro" onclick="window.location.href='product6.html';">
+          <img src="images/sales-agent-using-laptop.png" alt="Electric Hot Comb" width="226" height="226"
+            loading="lazy">
+          <div class="des">
+            <span style="color: white;">Accessories</span>
+            <h5 style="color: white;">Electric Hot Comb</h5>
+            <h4>$30</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ...existing code... -->
+
+    <!-- Footer -->
+    <footer class="section-p1">
+      <div class="col">
+        <a href="#"><img class="logo" src="images/FF TRADERS4.png" alt="FF Traders Logo" width="100" height="100"
+            loading="lazy"></a>
+        <h4 style="color: #0A98E0;">Contact</h4>
+        <p style="color: white;"><strong>Address:</strong> Scheme 33 Karachi</p>
+        <p style="color: white;"><strong>Phone:</strong> +92 315 2267180</p>
+        <div class="follow">
+          <h4 style="color: #0A98E0;">Follow Us</h4>
+          <div class="icon">
+            <i class="fab fa-facebook-f" style="color: #0A98E0;"></i>
+            <i class="fab fa-instagram" class="fab fa-twitter" style="color: #0A98E0;"></i>
+            <i class="fab fa-youtube" style="color: #0A98E0;"></i>
+            <i class="fab fa-pinterest-p" style="color: #0A98E0;"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="col">
+          <h4 style="color:#0A98E0;">About</h4>
+          <a href="about.html" style="color: white;">About Us</a>
+          <a href="#" style="color: white;">Delivery Information</a>
+          <a href="#" style="color: white;">Privacy Policy</a>
+          <a href="#" style="color: white;">Terms and Condition</a>
+          <a href="contact.html" style="color: white;">Contact Us</a>
+        </div>
+        <div class="col">
+          <h4 style="color: #0A98E0;">My Account</h4>
+          <a href="my-account.html" style="color: white;">My Account</a>
+          <a href="login.html" style="color: white;">Sign In</a>
+          <a href="signup.html" style="color: white;">Sign Up</a>
+          <a href="cart.html" style="color: white;">View Cart</a>
+          <a href="#" style="color: white;">My Wishlist</a>
+          <a href="track-order.html" style="color: white;">Track my Order</a>
+          <a href="#" style="color: white;">Help</a>
+        </div>
+
+        <!-- <div class="col install">
+          <h4>Install App</h4>
+          <p>From App Store or Google Play</p>
+          <div class="row">
+            <img src="https://i.postimg.cc/Y2s5mLdR/app.jpg" alt="App Store Badge" width="200" height="70"
+              loading="lazy">
+            <img src="https://i.postimg.cc/7YvyWTS6/play.jpg" alt="Google Play Badge" width="200" height="70"
+              loading="lazy">
+          </div> -->
+        <p style="color: white;">Secured Payment Gateways</p>
+        <!-- <img src="https://i.postimg.cc/kgfzqVRW/pay.png" alt="Payment Gateways Icons" width="300" height="70"
+          loading="lazy"> -->
+      </div>
+      </div>
+
+      <div class="coypright">
+        <p style="color: white;">© 2024 All rights reserved by FF TRADERS</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+
+</html>

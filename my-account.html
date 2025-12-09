@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - FF TRADERS</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <!-------------------------Font Awesome Icons --------------->
+    <script src="https://kit.fontawesome.com/dad03e859c.js" crossorigin="anonymous"></script>
+
+    <!----------Google font --------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkatra&family=Berkshire+Swash&family=Comic+Neue:wght@700&family=Gentium+Book+Plus:wght@400;700&family=Lato:ital,wght@0,400;0,700;0,900;1,700&family=Lexend+Deca:wght@500&family=Lexend:wght@500&family=Montserrat:wght@500&family=Open+Sans:wght@500;800&family=Roboto:wght@100;400&family=Sue+Ellen+Francisco&family=Work+Sans:wght@400;700;900&display=swap"
+      rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900;&display=swap">
+
+    <style>
+      .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 10px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Account Page Styles */
+      #account-dashboard {
+        padding: 40px 80px;
+      }
+
+      #account-dashboard h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        color: #0A98E0;
+      }
+
+      .dashboard-container {
+        display: flex;
+        gap: 30px;
+      }
+
+      .dashboard-nav {
+        flex: 1;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+      }
+
+      .dashboard-nav ul {
+        list-style: none;
+      }
+
+      .dashboard-nav ul li a {
+        display: block;
+        padding: 12px 15px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 600;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .dashboard-nav ul li a:hover,
+      .dashboard-nav ul li a.active {
+        background-color: #0A98E0;
+        color: white;
+      }
+
+      .dashboard-content {
+        flex: 3;
+      }
+
+      .dashboard-content h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+
+      .order-history table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .order-history th,
+      .order-history td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+      }
+
+      .order-history th {
+        background-color: #f2f2f2;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <a href="https://api.whatsapp.com/send/?phone=923152267180&text&type=phone_number&app_absent=0"
+      class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <section id="header">
+      <a href="index.html">
+        <img src="images/FF TRADERS4.png" alt="FF Traders Logo" width="80px" height="75px" loading="lazy">
+      </a>
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop all.html">Shop All</a></li>
+          <li><a href="about.html">About Us</a></li>
+
+          <li class="dropdown">
+            <a href="javascript:void(0);" id="services-link" class="no-link" aria-haspopup="true"
+              aria-expanded="false">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="our-services.html">Our Services</a></li>
+              <li><a href="it-solutions.html">IT Solutions</a></li>
+              <li><a href="real-estate.html">Real Estate</a></li>
+              <li><a href="import-export.html">Import & Export</a></li>
+              <li><a href="ecommerce-products.html">E-Commerce Products</a></li>
+              <li><a href="physiotherapy-equipment.html">Physiotherapy Equipment</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li class="cart-item">
+            <a href="cart.html" class="cart-link" aria-label="View cart">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </a>
+          </li>
+          <li><a href="#" id="close"><i class="far fa-times"></i></a></li>
+        </ul>
+        <div class="menu-icon" id="bar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="mobile">
+        <a href="cart.html"><i class="fal fa-shopping-bag"></i>
+          <span class="quantity">0</span>
+        </a>
+      </div>
+    </section>
+    <br><br><br>
+
+    <!-- My Account Section -->
+    <section id="account-dashboard" class="section-p1">
+      <h2>My Account</h2>
+      <div class="dashboard-container">
+        <nav class="dashboard-nav">
+          <ul>
+            <li><a href="#" class="active">Dashboard</a></li>
+            <li><a href="#">Order History</a></li>
+            <li><a href="#">Account Details</a></li>
+            <li><a href="#">Addresses</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#" id="logout-btn">Logout</a></li>
+          </ul>
+        </nav>
+        <div class="dashboard-content">
+          <h3 id="welcome-message">Welcome, User!</h3>
+          <p>From your account dashboard you can view your recent orders, manage your shipping and billing addresses,
+            and
+            edit your password and account details.</p>
+
+          <div class="order-history" style="margin-top: 30px;">
+            <h3>Recent Orders</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Total</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="order-history-body">
+                <!-- Order history will be populated by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section-p1">
+      <div class="col">
+        <a href="#"><img class="logo" src="images/FF TRADERS4.png" alt="FF Traders Logo" width="100" height="100"
+            loading="lazy"></a>
+        <h4 style="color: #0A98E0;">Contact</h4>
+        <p style="color: white;"><strong>Address:</strong> Scheme 33 Karachi</p>
+        <p style="color: white;"><strong>Phone:</strong> +92 315 2267180</p>
+        <div class="follow">
+          <h4 style="color: #0A98E0;">Follow Us</h4>
+          <div class="icon">
+            <i class="fab fa-facebook-f" style="color: #0A98E0;"></i>
+            <i class="fab fa-instagram" class="fab fa-twitter" style="color: #0A98E0;"></i>
+            <i class="fab fa-youtube" style="color: #0A98E0;"></i>
+            <i class="fab fa-pinterest-p" style="color: #0A98E0;"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="col">
+          <h4 style="color:#0A98E0;">About</h4>
+          <a href="about.html" style="color: white;">About Us</a>
+          <a href="#" style="color: white;">Delivery Information</a>
+          <a href="#" style="color: white;">Privacy Policy</a>
+          <a href="#" style="color: white;">Terms and Condition</a>
+          <a href="contact.html" style="color: white;">Contact Us</a>
+        </div>
+        <div class="col">
+          <h4 style="color: #0A98E0;">My Account</h4>
+          <a href="my-account.html" style="color: white;">My Account</a>
+          <a href="login.html" style="color: white;">Sign In</a>
+          <a href="signup.html" style="color: white;">Sign Up</a>
+          <a href="cart.html" style="color: white;">View Cart</a>
+          <a href="#" style="color: white;">My Wishlist</a>
+          <a href="track-order.html" style="color: white;">Track my Order</a>
+          <a href="#" style="color: white;">Help</a>
+        </div>
+
+        <!-- <div class="col install">
+          <h4>Install App</h4>
+          <p>From App Store or Google Play</p>
+          <div class="row">
+            <img src="https://i.postimg.cc/Y2s5mLdR/app.jpg" alt="App Store Badge" width="200" height="70"
+              loading="lazy">
+            <img src="https://i.postimg.cc/7YvyWTS6/play.jpg" alt="Google Play Badge" width="200" height="70"
+              loading="lazy">
+          </div> -->
+        <p style="color: white;">Secured Payment Gateways</p>
+        <!-- <img src="https://i.postimg.cc/kgfzqVRW/pay.png" alt="Payment Gateways Icons" width="300" height="70"
+          loading="lazy"> -->
+      </div>
+
+      <div class="coypright">
+        <p style="color: white;">© 2024 All rights reserved by FF TRADERS</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+
+        if (!loggedInUser) {
+          // If no user is logged in, redirect to the login page
+          window.location.href = 'login.html';
+        } else {
+          // If a user is logged in, update the welcome message
+          const welcomeMessage = document.getElementById('welcome-message');
+          if (welcomeMessage) {
+            welcomeMessage.textContent = `Welcome, ${loggedInUser.name}!`;
+          }
+
+          // Add logout functionality
+          const logoutBtn = document.getElementById('logout-btn');
+          if (logoutBtn) {
+            logoutBtn.addEventListener('click', (e) => {
+              e.preventDefault();
+              localStorage.removeItem('loggedInUser');
+              window.location.href = 'login.html';
+            });
+          }
+
+          // --- Function to render order history ---
+          function renderOrderHistory(userEmail) {
+            const allOrders = JSON.parse(localStorage.getItem('fftraders_orders') || '[]');
+            const userOrders = allOrders.filter(order => order.userId === userEmail);
+            const orderHistoryBody = document.getElementById('order-history-body');
+
+            if (!orderHistoryBody) return;
+
+            if (userOrders.length === 0) {
+              orderHistoryBody.innerHTML = `<tr><td colspan="5" style="text-align:center; padding: 20px;">You have no recent orders.</td></tr>`;
+            } else {
+              orderHistoryBody.innerHTML = userOrders.map(order => {
+                const orderDate = new Date(order.timestamp).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                });
+                return `
+                  <tr>
+                    <td>${order.orderId}</td>
+                    <td>${orderDate}</td>
+                    <td>${order.status}</td>
+                    <td>$${order.total}</td>
+                    <td><a href="#" style="color: #0A98E0; text-decoration: none;">View</a></td>
+                  </tr>
+                `;
+              }).join('');
+            }
+          }
+
+          // Render the order history for the logged-in user
+          renderOrderHistory(loggedInUser.email);
+        }
+      });
+    </script>
+  </body>
+
+</html>

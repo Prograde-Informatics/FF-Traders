@@ -1,0 +1,1578 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", san-serif;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0
+}
+
+.section-p1 {
+  padding: 40px 80px;
+
+}
+
+
+.section-m1 {
+  padding: 40px 0;
+}
+
+body {
+  width: 100%;
+  font-family: inherit;
+}
+
+
+
+#header {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background-color: black;
+  color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06)
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.quantity {
+  background-color: red;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  top: -5px;
+  left: 80%;
+  padding: 3px 5px;
+  font-size: 7px
+}
+
+#mobile {
+  display: none;
+  align-items: center
+}
+
+#close {
+  display: none
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  transition: 0.3s ease
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: #0A98E0;
+}
+
+/* Style for non-link dropdown toggles */
+#navbar li a.no-link {
+  cursor: pointer;
+}
+
+
+
+/* Add this after your #navbar li a:hover,active styles */
+
+/* Professional Dropdown Menu */
+/* Dropdown: sit flush under the parent link (no gap) */
+.dropdown {
+  position: relative;
+}
+
+/* updated dropdown-menu: no extra margin, small hidden offset */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  /* exactly at bottom of parent */
+  left: 0;
+  margin-top: 0;
+  /* remove gap */
+  background: black;
+  color: white;
+  min-width: 220px;
+  padding: 8px 0;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  display: flex;
+  /* keep flex so transitions work */
+  flex-direction: column;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  /* slight lift while hidden to animate in */
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  border-top: 3px solid #0A98E0;
+  pointer-events: none;
+}
+
+/* show immediately on hover; keep visible while hovering the box */
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0s;
+}
+
+/* optional small arrow — adjust 'left' to align under the link */
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 26px;
+  width: 12px;
+  height: 12px;
+  background: #0A98E0;
+  transform: rotate(45deg);
+  box-shadow: -3px -3px 6px rgba(0, 0, 0, 0.04);
+  z-index: 0;
+}
+
+.dropdown-menu li {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 12px 24px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #080808;
+  color: #0A98E0;
+  border-left-color: #0A98E0;
+  padding-left: 28px;
+}
+
+.dropdown-menu li:first-child a:hover {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.dropdown-menu li:last-child a:hover {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Remove the old dropdown-scroll styles and replace with above */
+
+
+
+
+#navbar li a:hover::after,
+#navbar li a.active::after {
+  content: " ";
+  width: 30%;
+  height: 2px;
+  background: 2px;
+  background-color: #0A98E0;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+/* Navbar cart style (placed after Contact Us) */
+#navbar .cart-item {
+  list-style: none;
+  position: relative;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+}
+
+#navbar .cart-link {
+  color: white;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+#navbar .cart-link:hover {
+  color: #0A98E0;
+}
+
+/* small round badge for item count */
+#navbar .cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: #ff3b30;
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  line-height: 1;
+  min-width: 18px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* mobile adjustments */
+@media (max-width: 920px) {
+  #navbar .cart-item {
+    padding-left: 0;
+    margin-top: 8px;
+  }
+}
+
+#hero {
+  background-image: url("images/men.png");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 10% right 0;
+  padding: 30px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 1;
+
+}
+
+#hero h1 {
+  color: #0A98E0;
+
+}
+
+
+#hero h4 {
+  padding-bottom: 15px;
+
+}
+
+#hero button {
+
+  background-color: transparent;
+  font-weight: bolder;
+  text-decoration: none;
+  color: white;
+  border: 0;
+  padding: 14px 80px 14px 50px;
+  cursor: pointer;
+}
+
+#hero button img {
+  height: 50px;
+  width: 100px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#hero button a:hover {
+  color: #0A98E0;
+
+}
+
+.who {
+  background-color: transparent;
+  text-decoration: none;
+  color: #0A98E0;
+  border: 0;
+  padding: 14px 80px 14px 50px;
+  cursor: pointer;
+}
+
+.who h2 {
+  color: #0A98E0;
+}
+
+.who p span {
+  color: black;
+  font-weight: bolder;
+  font-size: large;
+}
+
+.who p {
+  font-weight: 500;
+}
+
+#feature .fe-box {
+  width: 180px;
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 20px 20px 34px rgb(12, 10, 10);
+  border: 1px solid #cce7d0;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+
+#feature .fe-box:hover {
+  box-shadow: 10px 10px 54px rgb(4, 4, 10);
+}
+
+#feature .fe-box h6 {
+  display: in-block;
+  padding: 9px 8px 6px 8px;
+  line-height: 1;
+  border-radius: 4px;
+  color: #0A98E0;
+  background-color: #fddde4;
+}
+
+#feature .fe-box img {
+  width: 100%;
+  margin-bottom: 10px;
+
+}
+
+#feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+#feature .fe-box:nth-child(2) h6 {
+  background-color: #cdebbc;
+}
+
+
+#feature .fe-box:nth-child(3) h6 {
+  background-color: #d1e8f2;
+}
+
+#feature .fe-box:nth-child(4) h6 {
+  background-color: #cdd4f8;
+}
+
+#feature .fe-box:nth-child(5) h6 {
+  background-color: #f6dbf6;
+}
+
+#feature .fe-box:nth-child(6) h6 {
+  background-color: #fff2e5;
+}
+
+#product1 {
+  text-align: center;
+}
+
+#product1 .pro-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap
+}
+
+.pro-container2 {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  flex-wrap: wrap
+}
+
+#product1 .pro {
+  background-color: black;
+  width: 30%;
+  height: 390px;
+  min-width: 250px;
+  padding: 10px 12px;
+  border-left: 3px solid #0787c7;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+
+
+
+#product1 .pro:hover {
+  box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.06);
+  width: 33%;
+  height: 420px;
+}
+
+#product1 .pro img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+#product1 .pro .des {
+  text-align: start;
+  padding: 10px 0;
+}
+
+#product1 .pro .des span {
+  color: white;
+  font-size: 12px;
+}
+
+#product1 .pro .des h5 {
+  padding-top: 7px;
+  color: white;
+  font-size: 14px;
+}
+
+#product1 .pro .des i {
+  font-size: 12px;
+  color: rgb(243, 181, 25)
+}
+
+#product1 .pro .des h4 {
+  font-size: 15px;
+  padding-top: 7px;
+  font-weight: 700;
+  color: #0A98E0;
+}
+
+#product1 .pro .cart {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #e8f6ea;
+  font-weight: 500;
+  color: #0A98E0;
+  border: 1px solid #cce7d0;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+
+}
+
+.pro img {
+  border: 3px solid #0A98E0;
+}
+
+/* ...existing code... */
+
+/* Single-line horizontal services row */
+.pro-row {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  overflow-x: auto;
+  padding: 16px 8px;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* ensure each card stays fixed width and doesn't wrap */
+.pro-row .pro {
+  flex: 0 0 250px;
+  /* adjust width to match your images (300px used) */
+  max-width: 300px;
+
+  box-sizing: border-box;
+}
+
+/* make images fill card width responsively */
+.pro-row .pro img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* small visual scrollbar styling */
+.pro-row::-webkit-scrollbar {
+  color: #0A98E0;
+  height: 8px;
+}
+
+.pro-row::-webkit-scrollbar-thumb {
+  background: rgba(10, 152, 224, 0.35);
+  border-radius: 8px;
+}
+
+/* On very wide screens, allow cards to expand a bit */
+@media (min-width: 1200px) {
+  .pro-row .pro {
+    flex: 0 0 22%;
+    max-width: 22%;
+  }
+}
+
+/* Optional: hide excess text wrapping inside card descriptions */
+.pro-row .des {
+  white-space: normal;
+}
+
+/* ...existing code... */
+
+#banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(https://i.postimg.cc/SsC7D5WD/b2.jpg);
+  width: 100%;
+  height: 40vh;
+  background-position: center;
+  background-size: cover;
+
+}
+
+#banner h4 {
+  color: #fff;
+  font-size: 16px;
+}
+
+#banner h2 {
+  color: #fff;
+  font-size: 30px;
+  padding: 10px 0;
+}
+
+#banner h2 span {
+  color: #ef3636;
+
+}
+
+button.normal {
+  color: #000;
+  padding: 15px 30px;
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+  cursor: pointer
+}
+
+#banner button:hover {
+  background-color: #0A98E0;
+  color: #fff;
+}
+
+#sm-banner .banner-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  background-image: url(https://i.postimg.cc/vZ6YLxDG/b17.jpg);
+  min-width: 580px;
+  height: 40vh;
+  background-position: center;
+  background-size: cover;
+  padding: 30px
+}
+
+#sm-banner .banner-box2 {
+  background-image: url(https://i.postimg.cc/gJ7FHxHv/b10.jpg)
+}
+
+#sm-banner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#sm-banner h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+#sm-banner h2 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+#sm-banner span {
+  color: #0e0e0e;
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 16px;
+}
+
+button.white {
+  color: #000;
+  padding: 15px 30px;
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  outline: none;
+  transition: 0.2s;
+  cursor: pointer
+}
+
+#sm-banner .banner-box:hover button {
+  background-color: #0A98E0;
+  color: #fff;
+  border: 1px solid #0A98E0;
+
+}
+
+#banner3 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 80px;
+}
+
+#banner3 .banner-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  background-image: url(https://i.postimg.cc/BQQHKtwh/b7.jpg);
+  min-width: 30%;
+  height: 30vh;
+  background-position: center;
+  background-size: cover;
+  padding: 30px;
+  margin-bottom: 20px
+}
+
+#banner3 h2 {
+  color: #fff;
+  font-weight: 900;
+  font-size: 22px;
+}
+
+#banner3 h3 {
+  color: #ec544e;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+#banner3 .banner-img2 {
+  background-image: url(https://i.postimg.cc/SxP6qqdg/b4.jpg)
+}
+
+#banner3 .banner-img3 {
+  background-image: url(https://i.postimg.cc/m2th49nG/b18.jpg)
+}
+
+#newsletter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: url(https://i.postimg.cc/R0Bs4qqt/b14.png);
+  background-repeat: no-repeat;
+  background-position: 20% 30%;
+  background-color: #041e42;
+}
+
+#newsletter h4 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+#newsletter p {
+  color: #818ea0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+#newsletter p span {
+  color: #ffbd27;
+}
+
+#newsletter input {
+  height: 3.125rem;
+  width: 100%;
+  font-size: 14px;
+  padding: 0 1.25em;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#newsletter button {
+  background-color: #088178;
+  color: #fff;
+  white-space: nowrap;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#newsletter .form {
+  display: flex;
+  width: 40%;
+
+}
+
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+
+footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  margin-left: 50px
+}
+
+footer .sec {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+
+}
+
+footer .logo {
+  margin-bottom: 20px;
+}
+
+footer h4 {
+  font-size: 14px;
+  padding-bottom: 20px
+}
+
+footer p {
+  font-size: 13px;
+  margin: 0 0 8px 0;
+}
+
+
+footer a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+footer .follow {
+  margin-top: 20px
+}
+
+footer .follow i {
+  color: #465b52;
+  padding-right: 5px;
+  cursor: pointer;
+
+}
+
+footer .follow i:hover,
+footer a:hover {
+  color: #0A98E0;
+
+}
+
+footer .install .row img {
+  border: 1px solid #0A98E0;
+  border-radius: 6px;
+
+}
+
+footer .install img {
+  margin: 10px 0 15px 0
+}
+
+
+footer .copyright {
+  width: 100%;
+  text-align: center
+}
+
+
+
+/*----------------------Media Query ----------*/
+
+
+@media (max-width: 920px) {
+
+  .section-p1 {
+    padding: 40px 40px
+  }
+
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: #E3E6F3;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 0.3s
+  }
+
+  #navbar.active {
+    right: 0;
+  }
+
+  #navbar li {
+    margin-bottom: 25px
+  }
+
+  #mobile {
+    display: flex;
+    align-items: center
+  }
+
+  #mobile i {
+    font-size: 32px;
+    color: #1a1a1a;
+    padding-left: 20px
+  }
+
+  body #lg-bag {
+    display: none
+  }
+
+  #close {
+    display: initial;
+    position: absolute;
+    top: -280px;
+    left: 20px;
+    color: #222;
+    font-size: 32px;
+  }
+
+  #lg-bag {
+    display: none
+  }
+
+  .quantity {
+    top: 15px;
+    left: 83%;
+  }
+
+  /* Already inside your @media (max-width: 920px) */
+  #hero {
+    height: 70vh;
+    /* smaller height on tablets */
+    padding: 20px 40px;
+    /* reduce padding */
+    background-position: center;
+    background-image: none;
+    background-image: url(images/freepik__talk__11449.png);
+    /* center the image and show top portion */
+    background-size: cover;
+    /* ensure it covers the whole section */
+  }
+
+  /* Already inside your @media (max-width: 477px) */
+  /* #hero {
+    height: 60vh;
+    /* smaller height for mobile 
+    padding: 10px 20px;
+    background-position: center 30%;
+    /* adjust vertical focus 
+    background-size: cover;
+  } */
+
+
+  #feature {
+    justify-content: center;
+
+  }
+
+  #feature .fe-box {
+    margin: 15px 15px
+  }
+
+  #product1 .pro-container {
+    justify-content: center
+  }
+
+  #product1 .pro {
+    margin: 15px;
+  }
+
+  #banner {
+    height: 25vh
+  }
+
+  #sm-banner .banner-box {
+    min-width: 100%;
+    height: 30vh;
+  }
+
+  #banner3 {
+    padding: 0 40px
+  }
+
+  #banner3 .banner-box {
+    width: 28%
+  }
+
+  #newsletter .form {
+    width: 70%
+  }
+
+}
+
+@media (max-width: 477px) {
+  .section-p1 {
+    padding: 20px
+  }
+
+  #header {
+    padding: 10px 30px;
+  }
+
+  .quantity {
+    top: 7px;
+    left: 80%;
+  }
+
+  #hero {
+    padding: 0 20px;
+    background-position: 55%;
+  }
+
+  h2 {
+    font-size: 30px
+  }
+
+  h1 {
+    font-size: 28px
+  }
+
+  p {
+    line-height: 24px;
+    font-size: 10px;
+  }
+
+  #hero button {
+    margin-right: 10px
+  }
+
+  #feature {
+    justify-content: space-between;
+  }
+
+  #feature .fe-box {
+    width: 155px;
+    margin: 0 0 15px 0;
+  }
+
+  #product1 .pro {
+    width: 100%
+  }
+
+  #banner {
+    height: 40vh;
+  }
+
+  #sm-banner .banner-box {
+    height: 40vh;
+  }
+
+  #sm-banner .banner-box2 {
+    margin-top: 20px;
+  }
+
+  #banner3 {
+    padding: 0 20px;
+  }
+
+  #banner3 .banner-box {
+    width: 100%;
+  }
+
+  #newsletter .form {
+    width: 100%
+  }
+
+  #newsletter {
+    padding: 40px 20px;
+  }
+
+  footer .copyright {
+    text-align: start;
+  }
+}
+
+/* Your full CSS here, keep everything unchanged */
+
+/* Add this at the end for hamburger menu responsiveness */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.menu-icon span {
+  width: 30px;
+  height: 3px;
+  background: #0A98E0;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* Hamburger for mobile */
+@media (max-width: 920px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  #navbar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: black;
+    flex-direction: column;
+    padding-top: 80px;
+    transition: 0.3s;
+    z-index: 999;
+  }
+
+  #navbar.active {
+    right: 0;
+  }
+
+  #navbar li {
+    margin-bottom: 25px;
+  }
+
+  #close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    cursor: pointer;
+  }
+
+  /* Mobile Dropdown Styles */
+  #navbar .dropdown .dropdown-menu {
+    position: static;
+    /* Change from absolute to static for mobile nav */
+    background: none;
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    padding-left: 15px;
+    /* Indent dropdown items */
+    max-height: 0;
+    /* Hidden by default */
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: max-height 0.4s ease-in-out;
+    /* Smooth slide effect */
+    display: block;
+    /* Override flex */
+  }
+
+  #navbar .dropdown.active .dropdown-menu {
+    max-height: 300px;
+    /* Set a max-height to reveal the menu */
+    padding-top: 10px;
+  }
+
+  #navbar .dropdown .dropdown-menu li {
+    padding: 0;
+    margin-bottom: 15px;
+  }
+
+  #navbar .dropdown .dropdown-menu li a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #ccc;
+    /* Lighter color for sub-items */
+  }
+
+  #navbar .dropdown .dropdown-menu li a:hover,
+  #navbar .dropdown .dropdown-menu li a.active {
+    color: #0A98E0;
+    /* Highlight on hover/active */
+  }
+
+  #navbar .dropdown .dropdown-menu::before {
+    display: none;
+    /* Hide the desktop arrow on mobile */
+  }
+
+
+  #mobile {
+    display: none;
+    /* already hidden on desktop */
+    position: absolute;
+    /* position it relative to header */
+    top: 20px;
+    /* distance from top of header */
+    right: 30px;
+    /* distance from right */
+    z-index: 999;
+    /* above other elements */
+    cursor: pointer;
+  }
+
+  #mobile i {
+    font-size: 32px;
+    color: #1a1a1a;
+  }
+}
+
+/* Custom styles for service boxes on it-solutions.html */
+.service-box {
+  height: auto;
+  /* Remove fixed height */
+  display: flex;
+  flex-direction: column;
+}
+
+.service-box .des {
+  flex-grow: 1;
+  /* Allow description to take up available space */
+}
+
+.pro2 {
+  width: 30%;
+  height: 390px;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #cce7d0;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+
+
+.pro2:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+.pro2 img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.pro2 img {
+  height: 260px;
+  width: 100%;
+  border-radius: 20px;
+  border: 3px solid #0A98E0;
+}
+
+.pro2 .des {
+  text-align: start;
+  padding: 10px 0;
+}
+
+#product1 .pro .des span {
+  color: #606063;
+  font-size: 12px;
+}
+
+#product1 .pro .des h5 {
+  padding-top: 7px;
+  color: #1a1a1a;
+  font-size: 14px;
+}
+
+.pro2 .des i {
+  font-size: 12px;
+  color: rgb(243, 181, 25)
+}
+
+.pro2 .des h4 {
+  font-size: 15px;
+  padding-top: 7px;
+  font-weight: 700;
+  color: #0A98E0;
+}
+
+.pro2 .cart {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #e8f6ea;
+  font-weight: 500;
+  color: #0A98E0;
+  border: 1px solid #cce7d0;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+
+}
+
+.dropdown-scroll {
+  max-height: 300px;
+  /* max height before scrolling */
+  overflow-y: auto;
+  background-color: #E3E6F3;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  display: none;
+  z-index: 1000;
+}
+
+#navbar li:hover .dropdown-scroll {
+  display: block;
+}
+
+.dropdown-scroll li {
+  padding: 10px;
+}
+
+.dropdown-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dropdown-scroll::-webkit-scrollbar-thumb {
+  background-color: #0A98E0;
+  border-radius: 10px;
+}
+
+/* Standard Page Hero Section */
+.page-hero {
+  background-image: url('images/SL-113022-54210-29.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 140px 40px 60px 40px;
+  color: white;
+}
+
+.page-hero h1,
+.page-hero h2 {
+  color: #0A98E0;
+  font-size: 46px;
+  margin-bottom: 10px;
+}
+
+.page-hero p {
+  color: #222;
+  font-size: 18px;
+}
+
+/* PAGE HERO */
+.services-hero {
+  padding: 120px 20px;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.services-hero h1 {
+  font-size: 50px;
+  letter-spacing: 1px;
+}
+
+.services-hero p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* SERVICES SECTION */
+.services-section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.service-card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+.service-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-img img {
+  width: 350px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-content h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #0A98E0;
+}
+
+.service-content p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* toast notification for add-to-cart */
+.toast {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  min-width: 220px;
+  max-width: 320px;
+  background: rgba(10, 153, 224, 0.98);
+  /* blue accent */
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+  transform: translateY(-8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 99999;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* visible state */
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* success style */
+.toast.success {
+  background: linear-gradient(90deg, #0A98E0, #0787c7);
+}
+
+/* optional small icon */
+.toast .icon {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 14px;
+}
+
+/* close button */
+.toast .close {
+  margin-left: auto;
+  cursor: pointer;
+  opacity: 0.9;
+  font-size: 14px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Add-to-cart button */
+.add-to-cart {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 2px solid #0A98E0;
+  color: #0A98E0;
+  padding: 10px 14px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.18s ease, color 0.18s ease, transform 0.12s ease, box-shadow 0.18s ease;
+}
+
+/* icon size */
+.add-to-cart .cart {
+  font-size: 16px;
+}
+
+/* hover */
+.add-to-cart:hover {
+  background: #0A98E0;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* pressed / active */
+.add-to-cart:active {
+  transform: translateY(0);
+}
+
+/* temporary "added" state (applied by JS) */
+.add-to-cart.added {
+  background: linear-gradient(90deg, #0A98E0, #0787c7);
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(10, 152, 224, 0.20);
+  transform: translateY(-2px) scale(0.995);
+}
+
+/* check icon spacing when showing "Added" */
+.add-to-cart i.fal.fa-check {
+  margin-right: 6px;
+  font-size: 14px;
+}
+
+
+/* Custom Primary Button for "View All" links */
+.btn-primary {
+  background-color: #0A98E0;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #087ab8;
+  /* Darker blue on hover */
+  transform: translateY(-2px);
+  /* Slight lift effect */
+}
+
+/* Single Product Details */
+#prodetails {
+  display: flex;
+  margin-top: 20px;
+}
+
+#prodetails .single-pro-image {
+  width: 40%;
+  margin-right: 50px;
+}
+
+#prodetails .single-pro-details {
+  width: 50%;
+  padding-top: 30px;
+}
+
+#prodetails .single-pro-details h4 {
+  padding: 40px 0 20px 0;
+}
+
+#prodetails .single-pro-details h2 {
+  font-size: 26px;
+}
+
+#prodetails .single-pro-details input {
+  width: 50px;
+  height: 47px;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#prodetails .single-pro-details button {
+  background: #0A98E0;
+  color: white;
+}
+
+#prodetails .single-pro-details span {
+  line-height: 25px;
+}
+
+@media (max-width: 477px) {
+  #prodetails {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #prodetails .single-pro-image {
+    width: 100%;
+  }
+}
